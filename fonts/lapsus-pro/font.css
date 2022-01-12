@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'LapsusPro-Bold';
+  src: url('LapsusPro-Bold.eot');
+  src: url('LapsusPro-Bold.eot?#iefix') format('embedded-opentype'),
+       url('LapsusPro-Bold.svg#LapsusPro-Bold') format('svg'),
+       url('LapsusPro-Bold.ttf') format('truetype'),
+       url('LapsusPro-Bold.woff') format('woff'),
+       url('LapsusPro-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

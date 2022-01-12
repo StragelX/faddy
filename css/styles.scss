@@ -1,0 +1,1026 @@
+@import "basic.scss";
+@import "grid";
+
+@import "owl.carousel.scss";
+@import "owl.theme.default.scss";
+
+.df {
+  display: flex;
+  align-items: center;
+
+  &.s_betwen {
+    justify-content: space-between;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  &.no_scroll {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img_wrap {
+  flex: none;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+main {
+  flex: 1 1 auto;
+  padding: 20px;
+}
+
+footer {
+  flex: none;
+  height: 50px;
+  background-color: #b1c4d3;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  .copyright {
+    color: #07111d;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .terms_link {
+    color: #0e294a;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    & + .terms_link {
+      margin-left: 60px;
+    }
+  }
+
+  .voronin {
+    color: #07111d;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      margin-right: 15px;
+      height: 19px;
+    }
+  }
+}
+
+.content_wrap {
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+.input_wrap {
+  p {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  input {
+    width: 454px;
+    height: 51px;
+    line-height: 51px;
+    padding-left: 20px;
+    color: #0e294a;
+    font-family: "Lapsus Pro";
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 26px;
+    background-color: #fff;
+    border: 1px solid #f26522;
+  }
+}
+
+section {
+  &:last-of-type {
+    margin-bottom: 160px;
+  }
+
+  & + section {
+    margin-top: 80px;
+  }
+}
+
+.floating_btn {
+  z-index: 10;
+  position: fixed;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(36, 36, 36, 0.16);
+  transition: background-color 180ms, border 180ms;
+  background-color: #fff;
+  border: 1px solid #0e294a;
+
+  @media all and (max-width: 1400px) {
+    right: 30px;
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    transition: opacity 180ms;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:after {
+    opacity: 1;
+  }
+
+  &:before {
+    opacity: 0;
+  }
+
+  &:hover {
+    background-color: #0e294a;
+    transition: background-color 180ms, border 180ms;
+
+    &:after {
+      opacity: 0;
+      transition: opacity 180ms;
+    }
+
+    &:before {
+      opacity: 1;
+      transition: opacity 180ms;
+    }
+  }
+
+  &.blue {
+    border: 1px solid #fff;
+    background-color: #0e294a;
+
+    &:hover {
+      border: 1px solid #0e294a;
+      background-color: #fff;
+    }
+  }
+
+  span {
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 22px;
+    height: 22px;
+    background-color: #f26522;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.call_menu_btn {
+  top: 50px;
+
+  &:after {
+    width: 26px;
+    height: 17px;
+    background: url("../img/burdge_icon.svg") no-repeat center / contain;
+  }
+
+  &::before {
+    width: 26px;
+    height: 17px;
+    background: url("../img/burdge_icon_hover.svg") no-repeat center / contain;
+  }
+}
+
+.call_cabinet {
+  top: 140px;
+
+  &:after {
+    width: 26px;
+    height: 26px;
+    background: url("../img/person_icon.svg") no-repeat center / contain;
+  }
+
+  &:before {
+    width: 26px;
+    height: 26px;
+    background: url("../img/person_icon_hover.svg") no-repeat center / contain;
+  }
+}
+
+.call_cart {
+  bottom: 50px;
+
+  &:after {
+    width: 26px;
+    height: 26px;
+    background: url("../img/cart_icon.svg") no-repeat center / contain;
+  }
+
+  &:before {
+    width: 26px;
+    height: 26px;
+    background: url("../img/cart_icon_hover.svg") no-repeat center / contain;
+  }
+}
+
+// manu start
+nav {
+  max-width: inherit;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 3px 0 15px rgba(14, 41, 74, 0.2);
+  background: url("../img/menu_bg.jpg") no-repeat center / cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 5px;
+  }
+}
+
+.main_link {
+  flex: none;
+  display: block;
+  width: 105px;
+  height: 105px;
+  margin: 0 auto;
+
+  .logo {
+  }
+
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+
+menu {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.menu_link {
+  height: 65px;
+  padding: 0 20px;
+  background-color: transparent;
+  transition: background-color 180ms;
+
+  &:hover,
+  &.active {
+    background-color: transparent;
+    background-color: #f26522;
+  }
+
+  .cat {
+    width: 33px;
+    margin-right: 24px;
+    flex: none;
+  }
+
+  .arrow {
+    width: 7px;
+    flex: none;
+    color: #fff;
+    font-family: "Lapsus Pro";
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  span {
+    flex: 1 1 auto;
+    color: #fff;
+    font-family: "Lapsus Pro";
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  & + .menu_link {
+    margin-top: 15px;
+  }
+}
+
+.bottom_links {
+  text-align: center;
+
+  .tel {
+    color: #fff;
+    font-family: "Lapsus Pro";
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 180ms;
+
+    &:hover {
+      opacity: 0.6;
+      transition: opacity 180ms;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 23px;
+      height: 14px;
+      position: absolute;
+      top: -7px;
+      left: 27px;
+      z-index: 1;
+      background: url("../img/phone_with_cap.svg") no-repeat center / contain;
+    }
+  }
+
+  .social {
+    margin: 0 auto;
+    color: #fff;
+    font-family: "Lapsus Pro";
+    font-size: 18px;
+    font-weight: 700;
+    width: 120px;
+    height: 23px;
+
+    div {
+      margin-right: 5px;
+      width: 40px;
+      height: 23px;
+      background: url("../img/socials_bg.svg") no-repeat center / contain;
+
+      a {
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        opacity: 1;
+        transition: opacity 180ms;
+
+        &:hover {
+          opacity: 0.6;
+          transition: opacity 180ms;
+        }
+      }
+
+      .is {
+        top: 12%;
+        left: 3px;
+      }
+
+      .fb {
+        top: 2px;
+        left: 22px;
+      }
+    }
+  }
+}
+// manu end
+
+// main page
+.breadcrumbs {
+  display: flex;
+  margin-bottom: 20px;
+  grid-gap: 15px;
+
+  .main {
+    img {
+      height: 35px;
+    }
+  }
+
+  & > *:not(:first-child) {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 6px;
+      margin-right: 15px;
+      height: 11px;
+      background: url("../img/arrow_right_orange.svg") no-repeat center /
+        contain;
+    }
+
+    &:last-child {
+      pointer-events: none;
+      color: #f26522;
+    }
+  }
+
+  a:not(.main) {
+    color: #0e294a;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    line-height: 24px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.grid_section {
+  display: grid;
+  grid-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+
+  @media all and (max-width: 1400px) {
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .one,
+  .one a {
+    height: 250px;
+    display: block;
+    overflow: hidden;
+
+    @media all and (max-width: 1400px) {
+      height: 200px;
+    }
+
+    &.titling {
+      padding: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0e294a;
+      color: #fff;
+      font-family: "Lapsus Pro";
+      font-size: 44px;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: 2.2px;
+      line-height: 40px;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: normal;
+
+      &::before {
+        width: 80px;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 100% 50%);
+        background-color: #f26522;
+      }
+    }
+
+    .img_wrap {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .title_wrap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      min-height: 82px;
+      background-color: #f26522;
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 14px;
+      padding: 10px;
+      display: flex;
+      padding-bottom: 10px;
+      align-items: end;
+      transition: min-height 180ms, background-color 180ms, padding-bottom 180ms;
+
+      .left {
+        padding-right: 15px;
+        flex: 1 1 auto;
+      }
+
+      .type {
+        font-weight: 500;
+        margin-bottom: 7px;
+      }
+
+      .name {
+        font-weight: 700;
+      }
+
+      .price {
+        flex: none;
+        color: #fff;
+        font-family: "Lapsus Pro";
+        font-size: 25px;
+        font-weight: 700;
+        min-height: 62px;
+        transition: min-height 180ms;
+
+        &:after {
+          content: " ₴";
+        }
+      }
+
+      .desc {
+        overflow: hidden;
+        height: 0;
+        line-height: 40px;
+        transition: height 180ms;
+      }
+    }
+
+    .add_to_cart {
+      position: absolute;
+      bottom: 10px;
+      left: 5px;
+      right: 5px;
+      text-align: center;
+      overflow: hidden;
+      background-color: #0e294a;
+      height: 40px;
+      width: calc(100% - 10px);
+      font-family: "Lapsus Pro";
+      color: #fff;
+      font-size: 20px;
+      border-radius: 5px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 180ms;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        background-color: #f26522;
+        transition: width 360ms;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+          transition: width 360ms;
+        }
+      }
+
+      span {
+        z-index: 2;
+      }
+    }
+
+    &.active,
+    &:hover {
+      .title_wrap {
+        min-height: 100%;
+        background-color: rgba(14, 41, 74, 0.3);
+        padding-bottom: 60px;
+        transition: min-height 180ms, background-color 180ms,
+          padding-bottom 180ms;
+
+        .desc {
+          height: 30px;
+          transition: height 180ms;
+        }
+
+        .price {
+          min-height: 91px;
+          transition: min-height 180ms;
+        }
+      }
+
+      .add_to_cart {
+        pointer-events: all;
+        opacity: 1;
+        transition: opacity 180ms;
+      }
+    }
+
+    // 2 items
+    &:nth-child(2):nth-last-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+    &:nth-child(3):nth-last-child(1) {
+      grid-column-start: 4;
+      grid-column-end: 6;
+    }
+
+    // 3 items
+    &:nth-child(2):nth-last-child(3) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+    // 5 items
+    &:nth-child(3):nth-last-child(4) {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    &:nth-child(5):nth-last-child(2) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    // 6 items
+    &:nth-child(3):nth-last-child(5) {
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+
+    &:nth-child(6):nth-last-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+    &:nth-child(7):nth-last-child(1) {
+      grid-column-start: 4;
+      grid-column-end: 6;
+    }
+
+    // 7 items
+    &:nth-child(3):nth-last-child(6) {
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+
+    &:nth-child(8):nth-last-child(1) {
+      grid-column-start: 4;
+      grid-column-end: 6;
+    }
+
+    // 8 items
+    &:nth-child(3):nth-last-child(7) {
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+  }
+}
+
+.title_h2 {
+  text-align: center;
+  color: #0e294a;
+  font-family: "Lapsus Pro";
+  font-size: 51px;
+  font-weight: 700;
+  letter-spacing: 2.55px;
+  line-height: 48px;
+  margin-bottom: 80px;
+}
+
+.grid_3_2 {
+  display: grid;
+  grid-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(450px, 1fr));
+
+  .one {
+    height: 450px;
+
+    @media all and (max-width: 1400px) {
+      height: 350px;
+    }
+
+    .img_wrap {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .title_wrap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      min-height: 92px;
+      background-color: #f26522;
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 14px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-family: "Lapsus Pro";
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      img {
+        height: 40px;
+        margin-right: 20px;
+        flex: none;
+      }
+
+      div {
+        font-size: 30px;
+
+        span {
+          display: block;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.short {
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+.faq_line {
+  cursor: pointer;
+  overflow: hidden;
+  padding-bottom: 32px;
+
+  .title {
+    color: #0e294a;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    flex: 1 1 auto;
+    cursor: pointer;
+  }
+
+  .arrow {
+    width: 17px;
+    margin-left: 30px;
+    margin-right: 30px;
+    flex: none;
+    transform: rotate(180deg);
+    transition: transform 180ms;
+  }
+
+  .cont {
+    max-width: 1086px;
+    height: 120px;
+    color: #0e294a;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    overflow: hidden;
+    height: 0;
+  }
+
+  &.active {
+    .arrow {
+      transform: rotate(0);
+      transition: transform 180ms;
+    }
+
+    .cont {
+      height: auto;
+      margin-top: 32px;
+    }
+  }
+
+  & + .faq_line {
+    padding-top: 32px;
+    border-top: 2px solid #f26522;
+  }
+}
+
+.text_shortner {
+  .text_block {
+    line-height: 25px;
+    height: 145px;
+    overflow: hidden;
+  }
+
+  .show_more {
+    display: block;
+    margin: 40px auto 0;
+    color: #0e294a;
+    font-family: "Lapsus Pro";
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.25px;
+    text-decoration: underline;
+    width: 180px;
+    text-align: center;
+    transition: color 180ms;
+
+    &::before {
+      content: "Читати більше";
+    }
+
+    &:hover {
+      color: #f26522;
+      transition: color 180ms;
+    }
+  }
+
+  &.active {
+    .text_block {
+      height: auto;
+    }
+
+    .show_more {
+      &::before {
+        content: "Приховати";
+      }
+    }
+  }
+}
+
+.owl-nav {
+  font-family: "Lapsus Pro";
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-right: 40px;
+  float: right;
+  z-index: 2;
+
+  button {
+    color: #0e294a !important;
+    transition: color 180ms;
+
+    &:hover {
+      color: #f26522 !important;
+      transition: color 180ms;
+    }
+  }
+
+  .owl-prev {
+    margin-right: 25px;
+  }
+}
+
+.owl-dots {
+  margin-left: 30px;
+  margin-top: 35px;
+
+  .owl-dot {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #0e294a !important;
+    transition: background-color 180ms;
+
+    & + .owl-dot {
+      margin-left: 15px;
+    }
+
+    &.active {
+      background-color: #f26522 !important;
+      transition: background-color 180ms;
+    }
+  }
+}
+
+.map_wrap {
+  align-items: stretch;
+
+  .map {
+    flex: 1 1 auto;
+    background-color: aqua;
+  }
+
+  .map_info {
+    flex: none;
+    width: 630px;
+    padding: 55px 100px 55px 70px;
+    background-color: #0e294a;
+
+    @media all and (max-width: 1400px) {
+      padding: 30px;
+      width: 500px;
+    }
+
+    .title_h2 {
+      text-align: left;
+      color: #fff;
+      margin-bottom: 50px;
+    }
+
+    .input_wrap {
+      margin-bottom: 50px;
+
+      p {
+        color: #fff;
+      }
+    }
+
+    .delivery_info {
+      padding-left: 40px;
+      padding-right: 40px;
+
+      .line {
+        align-items: flex-start;
+
+        & + .line {
+          margin-top: 45px;
+        }
+      }
+
+      .dot {
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+        border-radius: 50%;
+
+        &.green {
+          background-color: #2dc937;
+        }
+
+        &.yellow {
+          background-color: #e7b416;
+        }
+
+        &.red {
+          background-color: #cc3232;
+        }
+      }
+
+      p {
+        margin-bottom: 5px;
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .price {
+        margin-bottom: 10px;
+        color: #f26522;
+        font-family: "Lapsus Pro";
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+}
