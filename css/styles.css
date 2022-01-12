@@ -1978,13 +1978,13 @@ menu {
   bottom: 0;
   left: 0;
   right: 0;
-  min-height: 82px;
   background-color: #f26522;
   color: #fff;
   font-family: Montserrat;
   font-size: 14px;
   padding: 10px;
   display: flex;
+  min-height: 82px;
   padding-bottom: 10px;
   align-items: end;
   transition: min-height 180ms, background-color 180ms, padding-bottom 180ms;
@@ -2197,6 +2197,7 @@ menu {
 
 .grid_3_2 .one {
   height: 450px;
+  overflow: hidden;
 }
 
 @media all and (max-width: 1400px) {
@@ -2219,19 +2220,22 @@ menu {
   bottom: 0;
   left: 0;
   right: 0;
-  min-height: 92px;
+  height: 92px;
   background-color: #f26522;
   color: #fff;
   font-family: Montserrat;
   font-size: 14px;
   padding: 0 20px;
-  display: flex;
-  align-items: center;
   color: #fff;
   font-family: "Lapsus Pro";
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: height 180ms, background-color 180ms, padding-bottom 180ms;
 }
 
 .grid_3_2 .one .title_wrap img {
@@ -2247,6 +2251,34 @@ menu {
 .grid_3_2 .one .title_wrap div span {
   display: block;
   font-size: 16px;
+}
+
+.grid_3_2 .one .desc {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 180ms;
+}
+
+.grid_3_2 .one .titling {
+  height: 92px;
+}
+
+.grid_3_2 .one:hover .title_wrap {
+  height: 100%;
+  padding-bottom: 40px;
+  background-color: rgba(14, 41, 74, 0.3);
+  transition: height 180ms, background-color 180ms, padding-bottom 180ms;
+}
+
+.grid_3_2 .one:hover .desc {
+  overflow: hidden;
+  max-height: 500px;
+  transition: max-height 180ms;
 }
 
 .short {
