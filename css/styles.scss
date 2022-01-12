@@ -220,6 +220,10 @@ section {
 .call_menu_btn {
   top: 50px;
 
+  @media all and (max-width: 1400px) {
+    top: 30px;
+  }
+
   &:after {
     width: 26px;
     height: 17px;
@@ -236,6 +240,10 @@ section {
 .call_cabinet {
   top: 140px;
 
+  @media all and (max-width: 1400px) {
+    top: 100px;
+  }
+
   &:after {
     width: 26px;
     height: 26px;
@@ -251,6 +259,10 @@ section {
 
 .call_cart {
   bottom: 50px;
+
+  @media all and (max-width: 1400px) {
+    bottom: 30px;
+  }
 
   &:after {
     width: 26px;
@@ -297,7 +309,6 @@ nav {
   flex: none;
   display: block;
   width: 105px;
-  height: 105px;
   margin: 0 auto;
 
   .logo {

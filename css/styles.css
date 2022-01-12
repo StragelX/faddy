@@ -1657,6 +1657,12 @@ section + section {
   top: 50px;
 }
 
+@media all and (max-width: 1400px) {
+  .call_menu_btn {
+    top: 30px;
+  }
+}
+
 .call_menu_btn:after {
   width: 26px;
   height: 17px;
@@ -1673,6 +1679,12 @@ section + section {
   top: 140px;
 }
 
+@media all and (max-width: 1400px) {
+  .call_cabinet {
+    top: 100px;
+  }
+}
+
 .call_cabinet:after {
   width: 26px;
   height: 26px;
@@ -1687,6 +1699,12 @@ section + section {
 
 .call_cart {
   bottom: 50px;
+}
+
+@media all and (max-width: 1400px) {
+  .call_cart {
+    bottom: 30px;
+  }
 }
 
 .call_cart:after {
@@ -1732,7 +1750,6 @@ nav::-webkit-scrollbar-thumb {
   flex: none;
   display: block;
   width: 105px;
-  height: 105px;
   margin: 0 auto;
 }
 
