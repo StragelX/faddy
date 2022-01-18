@@ -16,9 +16,14 @@ $(document).ready(function () {
     dots: true,
     slideBy: 1,
     navText: ["<", ">"],
-  });
 
-  $("a").click(function () {
-    alert("a");
+    responsive: {
+      0: {
+        items: 1,
+      },
+      1050: {
+        items: 2,
+      },
+    },
   });
 });
