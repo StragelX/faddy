@@ -8,7 +8,7 @@ $(document).ready(function () {
     $(this).closest(".text_shortner").toggleClass("active");
   });
 
-  $(".owl-carousel").owlCarousel({
+  $(".main_top_slider").owlCarousel({
     items: 2,
     margin: 20,
     loop: true,
@@ -25,5 +25,15 @@ $(document).ready(function () {
         items: 2,
       },
     },
+  });
+
+  // products_carousel
+
+  $(".products_carousel").owlCarousel({
+    items: 2.07,
+    margin: 10,
+    nav: false,
+    dots: false,
+    slideBy: 1,
   });
 });
