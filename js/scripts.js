@@ -27,11 +27,37 @@ $(document).ready(function () {
     },
   });
 
-  // products_carousel
-
   $(".products_carousel").owlCarousel({
     items: 2.07,
     margin: 10,
     dots: false,
+  });
+
+  $(".quantity_wrap .minus").click(function () {
+    var quantity = parseInt($(this).siblings("p").html());
+    quantity = 1 ? (quantity = 1) : quantity--;
+    $(this).siblings("p").html(quantity);
+    $(this).addClass("disabled");
+  });
+
+  $(".quantity_wrap .plus").click(function () {
+    var quantity = parseInt($(this).siblings("p").html());
+    quantity++;
+    $(this).siblings("p").html(quantity);
+    $(this).siblings(".minus").removeClass("disabled");
+  });
+
+  $(".price_remove_wrap .remove").click(function () {
+    $(this).closest(".one_cart_item").remove();
+  });
+
+  $(".call_cart").click(function () {
+    $(".cart_wrap").addClass("active");
+    $("body").addClass("no_scroll");
+  });
+
+  $(".cart_wrap .close_btn").click(function () {
+    $(".cart_wrap").removeClass("active");
+    $("body").removeClass("no_scroll");
   });
 });
