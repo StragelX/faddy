@@ -60,4 +60,9 @@ $(document).ready(function () {
     $(".cart_wrap").removeClass("active");
     $("body").removeClass("no_scroll");
   });
+
+  $(".call_menu_btn").click(function () {
+    $(this).toggleClass("active");
+    $(".second_nav").toggleClass("active");
+  });
 });
