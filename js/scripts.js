@@ -32,8 +32,6 @@ $(document).ready(function () {
   $(".products_carousel").owlCarousel({
     items: 2.07,
     margin: 10,
-    nav: false,
     dots: false,
-    slideBy: 1,
   });
 });
