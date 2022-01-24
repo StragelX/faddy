@@ -574,6 +574,7 @@ menu {
   @media all and (max-width: 767px) {
     grid-gap: 10px;
     flex-wrap: wrap;
+    max-width: 100vw;
   }
 
   .main {
@@ -1464,3 +1465,17 @@ menu {
     }
   }
 }
+
+// cart start
+.cart_wrap {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1108px;
+  height: 1080px;
+  box-shadow: -3px 0 15px rgba(14, 41, 74, 0.2);
+  background-color: #0e294a;
+}
+// cart end
