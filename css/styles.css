@@ -3039,6 +3039,34 @@ menu {
   }
 }
 
+.show_more_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.show_more_wrap .show_more_btn {
+  color: #0e294a;
+  font-family: "Lapsus Pro";
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+  text-decoration: underline;
+}
+
+.show_more_wrap .show_more_btn:hover {
+  text-decoration: none;
+}
+
+@media all and (max-width: 767px) {
+  .show_more_wrap .show_more_btn {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+  }
+}
+
 .cart_wrap {
   position: fixed;
   z-index: 100;
@@ -3588,5 +3616,29 @@ menu {
   width: 80px;
   margin-left: 30px;
   margin-bottom: 50px;
+}
+
+.pagination_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lapsus Pro";
+  font-size: 40px;
+  font-weight: 700;
+  grid-gap: 30px;
+}
+
+.pagination_wrap .nav {
+  font-size: 32px;
+}
+
+.pagination_wrap a {
+  color: #0e294a;
+  transition: color 180ms;
+}
+
+.pagination_wrap a:hover, .pagination_wrap a.active {
+  color: #f26522;
+  transition: color 180ms;
 }
 /*# sourceMappingURL=styles.css.map */

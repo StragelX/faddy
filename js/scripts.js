@@ -35,9 +35,9 @@ $(document).ready(function () {
 
   $(".quantity_wrap .minus").click(function () {
     var quantity = parseInt($(this).siblings("p").html());
-    quantity = 1 ? (quantity = 1) : quantity--;
+    quantity == 1 ? (quantity = 1) : quantity--;
     $(this).siblings("p").html(quantity);
-    $(this).addClass("disabled");
+    quantity == 1 ? $(this).addClass("disabled") : "";
   });
 
   $(".quantity_wrap .plus").click(function () {
