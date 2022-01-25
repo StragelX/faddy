@@ -1641,7 +1641,7 @@ section + section {
   height: 60px;
   border-radius: 50%;
   box-shadow: 0 5px 15px rgba(36, 36, 36, 0.16);
-  transition: background-color 180ms, border 180ms;
+  transition: background-color 180ms ease-in-out, border 180ms ease-in-out;
   background-color: #fff;
   border: 1px solid #0e294a;
 }
@@ -1661,7 +1661,7 @@ section + section {
 .floating_btn:after, .floating_btn:before {
   content: "";
   display: block;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1678,17 +1678,17 @@ section + section {
 
 .floating_btn:hover {
   background-color: #0e294a;
-  transition: background-color 180ms, border 180ms;
+  transition: background-color 180ms ease-in-out, border 180ms ease-in-out;
 }
 
 .floating_btn:hover:after {
   opacity: 0;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
 }
 
 .floating_btn:hover:before {
   opacity: 1;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
 }
 
 .floating_btn.blue {
@@ -1755,12 +1755,12 @@ section + section {
   width: 17px;
   display: block;
   fill: #fff;
-  transition: fill 180ms;
+  transition: fill 180ms ease-in-out;
 }
 
 .call_menu_btn.active:hover svg {
   fill: #0e294a;
-  transition: fill 180ms;
+  transition: fill 180ms ease-in-out;
 }
 
 .call_cabinet {
@@ -1839,12 +1839,12 @@ section + section {
   display: block;
   width: 105px;
   margin: 0 auto;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
   opacity: 1;
 }
 
 .main_link:hover {
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
   opacity: 0.7;
 }
 
@@ -1867,7 +1867,7 @@ menu {
   font-weight: 700;
   text-transform: uppercase;
   background-color: transparent;
-  transition: background-color 180ms;
+  transition: background-color 180ms ease-in-out;
 }
 
 @media all and (max-width: 1300px) {
@@ -1888,7 +1888,7 @@ menu {
 }
 
 .menu_link:hover .counter, .menu_link.active .counter {
-  transition: background-color 180ms;
+  transition: background-color 180ms ease-in-out;
   background-color: #0e294a;
 }
 
@@ -1939,7 +1939,7 @@ menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 180ms;
+  transition: background-color 180ms ease-in-out;
 }
 
 .bottom_links {
@@ -1954,12 +1954,12 @@ menu {
   margin-bottom: 14px;
   display: inline-block;
   opacity: 1;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
 }
 
 .bottom_links .tel:hover {
   opacity: 0.6;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
 }
 
 .bottom_links .tel::after {
@@ -1996,12 +1996,12 @@ menu {
   height: 15px;
   width: 15px;
   opacity: 1;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
 }
 
 .bottom_links .social div a:hover {
   opacity: 0.6;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
 }
 
 .bottom_links .social div .is {
@@ -2240,7 +2240,7 @@ menu {
   min-height: 82px;
   padding-bottom: 10px;
   align-items: end;
-  transition: min-height 180ms, background-color 180ms, padding-bottom 180ms;
+  transition: min-height 180ms ease-in-out, background-color 180ms ease-in-out, padding-bottom 180ms ease-in-out;
 }
 
 .grid_section .one .title_wrap .left,
@@ -2268,7 +2268,7 @@ menu {
   font-size: 25px;
   font-weight: 700;
   min-height: 62px;
-  transition: min-height 180ms;
+  transition: min-height 180ms ease-in-out;
 }
 
 .grid_section .one .title_wrap .price:after,
@@ -2281,7 +2281,7 @@ menu {
   overflow: hidden;
   height: 0;
   line-height: 40px;
-  transition: height 180ms;
+  transition: height 180ms ease-in-out;
 }
 
 .grid_section .one .add_to_cart,
@@ -2301,7 +2301,7 @@ menu {
   border-radius: 5px;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
 }
 
 .grid_section .one .add_to_cart:after,
@@ -2313,13 +2313,13 @@ menu {
   left: 0;
   width: 0;
   background-color: #f26522;
-  transition: width 360ms;
+  transition: width 360ms ease-in-out;
 }
 
 .grid_section .one .add_to_cart:hover:after,
 .grid_section .one a .add_to_cart:hover:after {
   width: 100%;
-  transition: width 360ms;
+  transition: width 360ms ease-in-out;
 }
 
 .grid_section .one .add_to_cart span,
@@ -2333,21 +2333,21 @@ menu {
   min-height: 100%;
   background-color: rgba(14, 41, 74, 0.3);
   padding-bottom: 60px;
-  transition: min-height 180ms, background-color 180ms, padding-bottom 180ms;
+  transition: min-height 180ms ease-in-out, background-color 180ms ease-in-out, padding-bottom 180ms;
 }
 
 .grid_section .one.active .title_wrap .desc, .grid_section .one:hover .title_wrap .desc,
 .grid_section .one a.active .title_wrap .desc,
 .grid_section .one a:hover .title_wrap .desc {
   height: 30px;
-  transition: height 180ms;
+  transition: height 180ms ease-in-out;
 }
 
 .grid_section .one.active .title_wrap .price, .grid_section .one:hover .title_wrap .price,
 .grid_section .one a.active .title_wrap .price,
 .grid_section .one a:hover .title_wrap .price {
   min-height: 91px;
-  transition: min-height 180ms;
+  transition: min-height 180ms ease-in-out;
 }
 
 .grid_section .one.active .add_to_cart, .grid_section .one:hover .add_to_cart,
@@ -2355,7 +2355,7 @@ menu {
 .grid_section .one a:hover .add_to_cart {
   pointer-events: all;
   opacity: 1;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
 }
 
 @media all and (min-width: 1300px) {
@@ -2526,6 +2526,21 @@ menu {
   }
 }
 
+.title_h3 {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+@media all and (max-width: 767px) {
+  .title_h3 {
+    font-size: 16px;
+  }
+}
+
 .grid_3_2 {
   display: grid;
   grid-gap: 20px;
@@ -2612,7 +2627,7 @@ menu {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: height 180ms, background-color 180ms, padding-bottom 180ms;
+  transition: height 180ms ease-in-out, background-color 180ms ease-in-out, padding-bottom 180ms ease-in-out;
 }
 
 .grid_3_2 .one .title_wrap img {
@@ -2639,12 +2654,12 @@ menu {
     height: 100%;
     padding-bottom: 40px;
     background-color: rgba(14, 41, 74, 0.3);
-    transition: height 180ms, background-color 180ms, padding-bottom 180ms;
+    transition: height 180ms ease-in-out, background-color 180ms ease-in-out, padding-bottom 180ms ease-in-out;
   }
   .grid_3_2 .one:hover .desc {
     overflow: hidden;
     max-height: 500px;
-    transition: max-height 180ms;
+    transition: max-height 180ms ease-in-out;
   }
 }
 
@@ -2656,7 +2671,7 @@ menu {
   text-transform: none;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 180ms;
+  transition: max-height 180ms ease-in-out;
 }
 
 @media all and (max-width: 767px) {
@@ -2711,7 +2726,7 @@ menu {
   margin-right: 30px;
   flex: none;
   transform: rotate(180deg);
-  transition: transform 180ms;
+  transition: transform 180ms ease-in-out;
 }
 
 @media all and (max-width: 767px) {
@@ -2742,7 +2757,7 @@ menu {
 
 .faq_line.active .arrow {
   transform: rotate(0);
-  transition: transform 180ms;
+  transition: transform 180ms ease-in-out;
 }
 
 .faq_line.active .cont {
@@ -2762,14 +2777,22 @@ menu {
 
 .text_shortner .text_block {
   line-height: 25px;
-  height: 145px;
-  overflow: hidden;
 }
 
 @media all and (max-width: 767px) {
   .text_shortner .text_block {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+.text_shortner .text_block.shortner {
+  height: 145px;
+  overflow: hidden;
+}
+
+@media all and (max-width: 767px) {
+  .text_shortner .text_block.shortner {
     height: 143px;
   }
 }
@@ -2785,7 +2808,7 @@ menu {
   text-decoration: underline;
   width: 180px;
   text-align: center;
-  transition: color 180ms;
+  transition: color 180ms ease-in-out;
 }
 
 @media all and (max-width: 767px) {
@@ -2801,10 +2824,10 @@ menu {
 
 .text_shortner .show_more:hover {
   color: #f26522;
-  transition: color 180ms;
+  transition: color 180ms ease-in-out;
 }
 
-.text_shortner.active .text_block {
+.text_shortner.active .shortner {
   height: auto;
 }
 
@@ -2831,12 +2854,12 @@ menu {
 
 .owl-nav button {
   color: #0e294a !important;
-  transition: color 180ms;
+  transition: color 180ms ease-in-out;
 }
 
 .owl-nav button:hover {
   color: #f26522 !important;
-  transition: color 180ms;
+  transition: color 180ms ease-in-out;
 }
 
 .owl-nav .owl-prev {
@@ -2860,7 +2883,7 @@ menu {
   width: 15px;
   height: 15px;
   background-color: #0e294a !important;
-  transition: background-color 180ms;
+  transition: background-color 180ms ease-in-out;
 }
 
 .owl-dots .owl-dot + .owl-dot {
@@ -2869,7 +2892,7 @@ menu {
 
 .owl-dots .owl-dot.active {
   background-color: #f26522 !important;
-  transition: background-color 180ms;
+  transition: background-color 180ms ease-in-out;
 }
 
 .map_wrap {
@@ -3054,10 +3077,12 @@ menu {
   font-weight: 700;
   letter-spacing: 1.25px;
   text-decoration: underline;
+  transition: color 180ms ease-in-out;
 }
 
 .show_more_wrap .show_more_btn:hover {
-  text-decoration: none;
+  color: #f26522;
+  transition: color 180ms ease-in-out;
 }
 
 @media all and (max-width: 767px) {
@@ -3120,7 +3145,7 @@ menu {
   box-shadow: 0 5px 15px rgba(36, 36, 36, 0.16);
   background-color: #fff;
   border-radius: 50%;
-  transition: background-color 180ms;
+  transition: background-color 180ms ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3150,7 +3175,7 @@ menu {
 
 .cart_wrap .close_btn path {
   fill: #0e294a;
-  transition: fill 180ms;
+  transition: fill 180ms ease-in-out;
 }
 
 @media all and (max-width: 767px) {
@@ -3162,11 +3187,11 @@ menu {
 @media all and (min-width: 767px) {
   .cart_wrap .close_btn:hover {
     background-color: #0e294a;
-    transition: background-color 180ms;
+    transition: background-color 180ms ease-in-out;
   }
   .cart_wrap .close_btn:hover path {
     fill: #fff;
-    transition: fill 180ms;
+    transition: fill 180ms ease-in-out;
   }
 }
 
@@ -3272,7 +3297,7 @@ menu {
   align-items: center;
   justify-content: center;
   opacity: 0.4;
-  transition: opacity 180ms, border 180ms;
+  transition: opacity 180ms ease-in-out, border 180ms ease-in-out;
   border: 1px solid #fff;
 }
 
@@ -3302,18 +3327,18 @@ menu {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 20;
-  transition: stroke 180ms;
+  transition: stroke 180ms ease-in-out;
 }
 
 @media all and (min-width: 767px) {
   .cart_wrap .one_cart_item .price_remove_wrap .remove:hover {
     opacity: 1;
     border: 1px solid #f26522;
-    transition: opacity 180ms, border 180ms;
+    transition: opacity 180ms ease-in-out, border 180ms ease-in-out;
   }
   .cart_wrap .one_cart_item .price_remove_wrap .remove:hover svg path {
     stroke: #f26522;
-    transition: stroke 180ms;
+    transition: stroke 180ms ease-in-out;
   }
 }
 
@@ -3371,7 +3396,7 @@ menu {
   color: #f26522;
   font-size: 46px;
   opacity: 1;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
 }
 
 @media all and (max-width: 767px) {
@@ -3384,14 +3409,14 @@ menu {
 
 .cart_wrap .one_cart_item .quantity_wrap button.disabled {
   opacity: 0.3;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
   pointer-events: none;
 }
 
 @media all and (min-width: 767px) {
   .cart_wrap .one_cart_item .quantity_wrap button:hover {
     opacity: 0.7;
-    transition: opacity 180ms;
+    transition: opacity 180ms ease-in-out;
   }
 }
 
@@ -3495,7 +3520,7 @@ menu {
   border-radius: 4px;
   background-color: #f26522;
   border: solid f26522 1px;
-  transition: color 180ms;
+  transition: color 180ms ease-in-out;
 }
 
 @media all and (max-width: 767px) {
@@ -3517,7 +3542,7 @@ menu {
   left: 1px;
   width: 0;
   background-color: #fff;
-  transition: width 180ms;
+  transition: width 180ms ease-in-out;
 }
 
 .cart_wrap .confirm_cart span {
@@ -3526,12 +3551,12 @@ menu {
 
 .cart_wrap .confirm_cart:hover {
   color: #f26522;
-  transition: color 180ms;
+  transition: color 180ms ease-in-out;
 }
 
 .cart_wrap .confirm_cart:hover::before {
   width: calc(100% - 2px);
-  transition: width 180ms;
+  transition: width 180ms ease-in-out;
 }
 
 .cart_wrap .total_price {
@@ -3634,11 +3659,312 @@ menu {
 
 .pagination_wrap a {
   color: #0e294a;
-  transition: color 180ms;
+  transition: color 180ms ease-in-out;
 }
 
 .pagination_wrap a:hover, .pagination_wrap a.active {
   color: #f26522;
-  transition: color 180ms;
+  transition: color 180ms ease-in-out;
+}
+
+.category_top_banner {
+  padding: 50px;
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  background-position: right center;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  min-height: 290px;
+}
+
+@media all and (max-width: 1000px) {
+  .category_top_banner {
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px 15px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .category_top_banner {
+    padding: 25px 10px;
+  }
+}
+
+.category_top_banner::before {
+  width: 60%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: #f26522;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+}
+
+@media all and (max-width: 1100px) {
+  .category_top_banner::before {
+    width: 75%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .category_top_banner::before {
+    top: auto;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 50%, 100% 70%, 100% 100%, 0% 100%);
+  }
+}
+
+@media all and (max-width: 767px) {
+  .category_top_banner::before {
+    height: 75%;
+  }
+}
+
+.category_top_banner .titling {
+  font-family: "Lapsus Pro";
+  margin-bottom: 30px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 1000px) {
+  .category_top_banner .titling {
+    margin-bottom: 0;
+    font-size: 26px;
+  }
+}
+
+.category_top_banner .info {
+  max-width: 41%;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  letter-spacing: 0.7px;
+  line-height: 24px;
+}
+
+@media all and (max-width: 1000px) {
+  .category_top_banner .info {
+    display: none;
+  }
+}
+
+.category_grid {
+  display: grid;
+  grid-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(290px, 1fr));
+}
+
+@media all and (max-width: 1100px) {
+  .category_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media all and (max-width: 767px) {
+  .category_grid {
+    grid-gap: 10px;
+    grid-template-rows: repeat(auto-fill, minmax(calc(50vw - 22px), 1fr));
+  }
+}
+
+.category_grid .category_link {
+  height: 290px;
+}
+
+@media all and (max-width: 767px) {
+  .category_grid .category_link {
+    height: calc(50vw - 22px);
+  }
+}
+
+.category_grid .category_link .img_wrap {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.category_grid .category_link .name_arrow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 39px;
+  background-color: #f26522;
+  padding: 10px 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: 700;
+  transition: height 250ms ease-in-out, background-color 250ms ease-in-out;
+}
+
+.category_grid .category_link .name_arrow span {
+  font-size: 16px;
+  flex: 0 0 0%;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: flex 250ms ease-in-out, font-size 250ms ease-in-out;
+}
+
+@media all and (max-width: 767px) {
+  .category_grid .category_link .name_arrow span {
+    font-size: 12px;
+  }
+}
+
+.category_grid .category_link .name_arrow img {
+  width: 5px;
+  height: 9px;
+}
+
+.category_grid .category_link:hover .name_arrow {
+  height: 100%;
+  transition: height 250ms ease-in-out, background-color 250ms ease-in-out;
+  background-color: rgba(14, 41, 74, 0.3);
+}
+
+.category_grid .category_link:hover .name_arrow span {
+  flex: 1 1 100%;
+  font-size: 26px;
+  transition: flex 250ms ease-in-out, font-size 250ms ease-in-out;
+}
+
+@media all and (max-width: 767px) {
+  .category_grid .category_link:hover .name_arrow span {
+    font-size: 16px;
+  }
+}
+
+.category_grid .category_link:hover .name_arrow img {
+  display: none;
+}
+
+.feed_back_wrap .headings {
+  margin-bottom: 60px;
+}
+
+@media all and (max-width: 767px) {
+  .feed_back_wrap .headings {
+    margin-bottom: 40px;
+  }
+}
+
+.feed_back_wrap .title_h2 {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+@media all and (max-width: 767px) {
+  .feed_back_wrap .title_h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.feed_back_wrap .subtitle {
+  margin: 10px 0;
+  color: #0e294a;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media all and (max-width: 767px) {
+  .feed_back_wrap .subtitle {
+    font-size: 10px;
+  }
+}
+
+.feed_back_wrap .stars {
+  grid-gap: 12px;
+}
+
+.feed_back_wrap .stars img {
+  height: 20px;
+}
+
+.feed_back_wrap .stars p {
+  color: #0e294a;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.one_feedback {
+  box-shadow: 0 3px 10px rgba(14, 41, 74, 0.2);
+  background-color: #fff;
+  padding: 40px;
+  color: #0e294a;
+  font-weight: 700;
+  font-family: "Lapsus Pro";
+}
+
+@media all and (max-width: 767px) {
+  .one_feedback {
+    padding: 10px 10px 15px;
+  }
+}
+
+.one_feedback .inner_heading {
+  margin-bottom: 20px;
+  align-items: baseline;
+}
+
+.one_feedback h3 {
+  font-size: 35px;
+}
+
+@media all and (max-width: 767px) {
+  .one_feedback h3 {
+    font-size: 26px;
+  }
+}
+
+.one_feedback .date {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media all and (max-width: 767px) {
+  .one_feedback .date {
+    font-size: 10px;
+  }
+}
+
+.one_feedback .feedback {
+  font-size: 22px;
+}
+
+@media all and (max-width: 767px) {
+  .one_feedback .feedback {
+    font-size: 16px;
+  }
+}
+
+.one_feedback + .one_feedback {
+  margin-top: 40px;
+}
+
+@media all and (max-width: 767px) {
+  .one_feedback + .one_feedback {
+    margin-bottom: 30px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

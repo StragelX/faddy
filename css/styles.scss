@@ -193,7 +193,7 @@ section {
   height: 60px;
   border-radius: 50%;
   box-shadow: 0 5px 15px rgba(36, 36, 36, 0.16);
-  transition: background-color 180ms, border 180ms;
+  transition: background-color 180ms ease-in-out, border 180ms ease-in-out;
   background-color: #fff;
   border: 1px solid #0e294a;
 
@@ -209,7 +209,7 @@ section {
   &:before {
     content: "";
     display: block;
-    transition: opacity 180ms;
+    transition: opacity 180ms ease-in-out;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -226,16 +226,16 @@ section {
 
   &:hover {
     background-color: #0e294a;
-    transition: background-color 180ms, border 180ms;
+    transition: background-color 180ms ease-in-out, border 180ms ease-in-out;
 
     &:after {
       opacity: 0;
-      transition: opacity 180ms;
+      transition: opacity 180ms ease-in-out;
     }
 
     &:before {
       opacity: 1;
-      transition: opacity 180ms;
+      transition: opacity 180ms ease-in-out;
     }
   }
 
@@ -303,13 +303,13 @@ section {
       width: 17px;
       display: block;
       fill: #fff;
-      transition: fill 180ms;
+      transition: fill 180ms ease-in-out;
     }
 
     &:hover {
       svg {
         fill: #0e294a;
-        transition: fill 180ms;
+        transition: fill 180ms ease-in-out;
       }
     }
   }
@@ -390,11 +390,11 @@ nav {
   display: block;
   width: 105px;
   margin: 0 auto;
-  transition: opacity 180ms;
+  transition: opacity 180ms ease-in-out;
   opacity: 1;
 
   &:hover {
-    transition: opacity 180ms;
+    transition: opacity 180ms ease-in-out;
     opacity: 0.7;
   }
 
@@ -418,7 +418,7 @@ menu {
   font-weight: 700;
   text-transform: uppercase;
   background-color: transparent;
-  transition: background-color 180ms;
+  transition: background-color 180ms ease-in-out;
 
   @media all and (max-width: 1300px) {
     padding: 0 10px;
@@ -434,7 +434,7 @@ menu {
     background-color: #f26522;
 
     .counter {
-      transition: background-color 180ms;
+      transition: background-color 180ms ease-in-out;
       background-color: #0e294a;
     }
   }
@@ -484,7 +484,7 @@ menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 180ms;
+    transition: background-color 180ms ease-in-out;
   }
 }
 
@@ -499,11 +499,11 @@ menu {
     margin-bottom: 14px;
     display: inline-block;
     opacity: 1;
-    transition: opacity 180ms;
+    transition: opacity 180ms ease-in-out;
 
     &:hover {
       opacity: 0.6;
-      transition: opacity 180ms;
+      transition: opacity 180ms ease-in-out;
     }
 
     &::after {
@@ -539,11 +539,11 @@ menu {
         height: 15px;
         width: 15px;
         opacity: 1;
-        transition: opacity 180ms;
+        transition: opacity 180ms ease-in-out;
 
         &:hover {
           opacity: 0.6;
-          transition: opacity 180ms;
+          transition: opacity 180ms ease-in-out;
         }
       }
 
@@ -767,7 +767,8 @@ menu {
       min-height: 82px;
       padding-bottom: 10px;
       align-items: end;
-      transition: min-height 180ms, background-color 180ms, padding-bottom 180ms;
+      transition: min-height 180ms ease-in-out,
+        background-color 180ms ease-in-out, padding-bottom 180ms ease-in-out;
 
       .left {
         padding-right: 15px;
@@ -790,7 +791,7 @@ menu {
         font-size: 25px;
         font-weight: 700;
         min-height: 62px;
-        transition: min-height 180ms;
+        transition: min-height 180ms ease-in-out;
 
         &:after {
           content: " ₴";
@@ -801,7 +802,7 @@ menu {
         overflow: hidden;
         height: 0;
         line-height: 40px;
-        transition: height 180ms;
+        transition: height 180ms ease-in-out;
       }
     }
 
@@ -821,7 +822,7 @@ menu {
       border-radius: 5px;
       pointer-events: none;
       opacity: 0;
-      transition: opacity 180ms;
+      transition: opacity 180ms ease-in-out;
 
       &:after {
         content: "";
@@ -831,13 +832,13 @@ menu {
         left: 0;
         width: 0;
         background-color: #f26522;
-        transition: width 360ms;
+        transition: width 360ms ease-in-out;
       }
 
       &:hover {
         &:after {
           width: 100%;
-          transition: width 360ms;
+          transition: width 360ms ease-in-out;
         }
       }
 
@@ -852,24 +853,24 @@ menu {
         min-height: 100%;
         background-color: rgba(14, 41, 74, 0.3);
         padding-bottom: 60px;
-        transition: min-height 180ms, background-color 180ms,
-          padding-bottom 180ms;
+        transition: min-height 180ms ease-in-out,
+          background-color 180ms ease-in-out, padding-bottom 180ms;
 
         .desc {
           height: 30px;
-          transition: height 180ms;
+          transition: height 180ms ease-in-out;
         }
 
         .price {
           min-height: 91px;
-          transition: min-height 180ms;
+          transition: min-height 180ms ease-in-out;
         }
       }
 
       .add_to_cart {
         pointer-events: all;
         opacity: 1;
-        transition: opacity 180ms;
+        transition: opacity 180ms ease-in-out;
       }
     }
 
@@ -1048,6 +1049,19 @@ menu {
   }
 }
 
+.title_h3 {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 30px;
+
+  @media all and (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
 .grid_3_2 {
   display: grid;
   grid-gap: 20px;
@@ -1118,7 +1132,8 @@ menu {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      transition: height 180ms, background-color 180ms, padding-bottom 180ms;
+      transition: height 180ms ease-in-out, background-color 180ms ease-in-out,
+        padding-bottom 180ms ease-in-out;
 
       img {
         height: 40px;
@@ -1146,13 +1161,14 @@ menu {
           height: 100%;
           padding-bottom: 40px;
           background-color: rgba(14, 41, 74, 0.3);
-          transition: height 180ms, background-color 180ms, padding-bottom 180ms;
+          transition: height 180ms ease-in-out,
+            background-color 180ms ease-in-out, padding-bottom 180ms ease-in-out;
         }
 
         .desc {
           overflow: hidden;
           max-height: 500px;
-          transition: max-height 180ms;
+          transition: max-height 180ms ease-in-out;
         }
       }
     }
@@ -1166,7 +1182,7 @@ menu {
     text-transform: none;
     overflow: hidden;
     max-height: 0;
-    transition: max-height 180ms;
+    transition: max-height 180ms ease-in-out;
 
     @media all and (max-width: 767px) {
       overflow: auto;
@@ -1217,7 +1233,7 @@ menu {
     margin-right: 30px;
     flex: none;
     transform: rotate(180deg);
-    transition: transform 180ms;
+    transition: transform 180ms ease-in-out;
 
     @media all and (max-width: 767px) {
       margin-right: 0;
@@ -1245,7 +1261,7 @@ menu {
   &.active {
     .arrow {
       transform: rotate(0);
-      transition: transform 180ms;
+      transition: transform 180ms ease-in-out;
     }
 
     .cont {
@@ -1268,13 +1284,19 @@ menu {
 .text_shortner {
   .text_block {
     line-height: 25px;
-    height: 145px;
-    overflow: hidden;
 
     @media all and (max-width: 767px) {
       font-size: 14px;
       line-height: 20px;
-      height: 143px;
+    }
+
+    &.shortner {
+      height: 145px;
+      overflow: hidden;
+
+      @media all and (max-width: 767px) {
+        height: 143px;
+      }
     }
   }
 
@@ -1289,7 +1311,7 @@ menu {
     text-decoration: underline;
     width: 180px;
     text-align: center;
-    transition: color 180ms;
+    transition: color 180ms ease-in-out;
 
     @media all and (max-width: 767px) {
       font-size: 16px;
@@ -1302,12 +1324,12 @@ menu {
 
     &:hover {
       color: #f26522;
-      transition: color 180ms;
+      transition: color 180ms ease-in-out;
     }
   }
 
   &.active {
-    .text_block {
+    .shortner {
       height: auto;
     }
 
@@ -1335,11 +1357,11 @@ menu {
 
   button {
     color: #0e294a !important;
-    transition: color 180ms;
+    transition: color 180ms ease-in-out;
 
     &:hover {
       color: #f26522 !important;
-      transition: color 180ms;
+      transition: color 180ms ease-in-out;
     }
   }
 
@@ -1362,7 +1384,7 @@ menu {
     width: 15px;
     height: 15px;
     background-color: #0e294a !important;
-    transition: background-color 180ms;
+    transition: background-color 180ms ease-in-out;
 
     & + .owl-dot {
       margin-left: 15px;
@@ -1370,7 +1392,7 @@ menu {
 
     &.active {
       background-color: #f26522 !important;
-      transition: background-color 180ms;
+      transition: background-color 180ms ease-in-out;
     }
   }
 }
@@ -1532,9 +1554,11 @@ menu {
     font-weight: 700;
     letter-spacing: 1.25px;
     text-decoration: underline;
+    transition: color 180ms ease-in-out;
 
     &:hover {
-      text-decoration: none;
+      color: #f26522;
+      transition: color 180ms ease-in-out;
     }
 
     @media all and (max-width: 767px) {
@@ -1593,7 +1617,7 @@ menu {
     box-shadow: 0 5px 15px rgba(36, 36, 36, 0.16);
     background-color: #fff;
     border-radius: 50%;
-    transition: background-color 180ms;
+    transition: background-color 180ms ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1618,7 +1642,7 @@ menu {
 
     path {
       fill: #0e294a;
-      transition: fill 180ms;
+      transition: fill 180ms ease-in-out;
 
       @media all and (max-width: 767px) {
         fill: #fff;
@@ -1628,11 +1652,11 @@ menu {
     @media all and (min-width: 767px) {
       &:hover {
         background-color: #0e294a;
-        transition: background-color 180ms;
+        transition: background-color 180ms ease-in-out;
 
         path {
           fill: #fff;
-          transition: fill 180ms;
+          transition: fill 180ms ease-in-out;
         }
       }
     }
@@ -1724,7 +1748,7 @@ menu {
         align-items: center;
         justify-content: center;
         opacity: 0.4;
-        transition: opacity 180ms, border 180ms;
+        transition: opacity 180ms ease-in-out, border 180ms ease-in-out;
         border: 1px solid #fff;
 
         @media all and (max-width: 767px) {
@@ -1748,7 +1772,7 @@ menu {
             stroke-linecap: round;
             stroke-linejoin: round;
             stroke-miterlimit: 20;
-            transition: stroke 180ms;
+            transition: stroke 180ms ease-in-out;
           }
         }
 
@@ -1756,12 +1780,12 @@ menu {
           @media all and (min-width: 767px) {
             opacity: 1;
             border: 1px solid #f26522;
-            transition: opacity 180ms, border 180ms;
+            transition: opacity 180ms ease-in-out, border 180ms ease-in-out;
 
             svg {
               path {
                 stroke: #f26522;
-                transition: stroke 180ms;
+                transition: stroke 180ms ease-in-out;
               }
             }
           }
@@ -1816,7 +1840,7 @@ menu {
         color: #f26522;
         font-size: 46px;
         opacity: 1;
-        transition: opacity 180ms;
+        transition: opacity 180ms ease-in-out;
 
         @media all and (max-width: 767px) {
           font-size: 20px;
@@ -1826,14 +1850,14 @@ menu {
 
         &.disabled {
           opacity: 0.3;
-          transition: opacity 180ms;
+          transition: opacity 180ms ease-in-out;
           pointer-events: none;
         }
 
         &:hover {
           @media all and (min-width: 767px) {
             opacity: 0.7;
-            transition: opacity 180ms;
+            transition: opacity 180ms ease-in-out;
           }
         }
 
@@ -1930,7 +1954,7 @@ menu {
     border-radius: 4px;
     background-color: #f26522;
     border: solid f26522 1px;
-    transition: color 180ms;
+    transition: color 180ms ease-in-out;
 
     @media all and (max-width: 767px) {
       width: 100%;
@@ -1949,7 +1973,7 @@ menu {
       left: 1px;
       width: 0;
       background-color: #fff;
-      transition: width 180ms;
+      transition: width 180ms ease-in-out;
     }
 
     span {
@@ -1958,11 +1982,11 @@ menu {
 
     &:hover {
       color: #f26522;
-      transition: color 180ms;
+      transition: color 180ms ease-in-out;
 
       &::before {
         width: calc(100% - 2px);
-        transition: width 180ms;
+        transition: width 180ms ease-in-out;
       }
     }
   }
@@ -2065,16 +2089,283 @@ menu {
 
   a {
     color: #0e294a;
-    transition: color 180ms;
+    transition: color 180ms ease-in-out;
 
     &:hover,
     &.active {
       color: #f26522;
-      transition: color 180ms;
+      transition: color 180ms ease-in-out;
     }
   }
 }
 // pagination end
 
+// category start
+.category_top_banner {
+  padding: 50px;
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  background-position: right center;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  min-height: 290px;
+
+  @media all and (max-width: 1000px) {
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px 15px;
+  }
+
+  @media all and (max-width: 767px) {
+    padding: 25px 10px;
+  }
+
+  &::before {
+    width: 60%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: #f26522;
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+
+    @media all and (max-width: 1100px) {
+      width: 75%;
+    }
+
+    @media all and (max-width: 1000px) {
+      top: auto;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(0 50%, 100% 70%, 100% 100%, 0% 100%);
+    }
+
+    @media all and (max-width: 767px) {
+      height: 75%;
+    }
+  }
+
+  .titling {
+    font-family: "Lapsus Pro";
+    margin-bottom: 30px;
+    font-size: 40px;
+    text-transform: uppercase;
+
+    @media all and (max-width: 1000px) {
+      margin-bottom: 0;
+      font-size: 26px;
+    }
+  }
+
+  .info {
+    max-width: 41%;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: 0.7px;
+    line-height: 24px;
+
+    @media all and (max-width: 1000px) {
+      display: none;
+    }
+  }
+}
+
+.category_grid {
+  display: grid;
+  grid-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(290px, 1fr));
+
+  @media all and (max-width: 1100px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media all and (max-width: 767px) {
+    grid-gap: 10px;
+    grid-template-rows: repeat(auto-fill, minmax(calc(50vw - 22px), 1fr));
+  }
+
+  .category_link {
+    height: 290px;
+
+    @media all and (max-width: 767px) {
+      height: calc(50vw - 22px);
+    }
+
+    .img_wrap {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .name_arrow {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 39px;
+      background-color: #f26522;
+      padding: 10px 20px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      font-family: Montserrat;
+      font-weight: 700;
+      transition: height 250ms ease-in-out, background-color 250ms ease-in-out;
+
+      span {
+        font-size: 16px;
+        flex: 0 0 0%;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: flex 250ms ease-in-out, font-size 250ms ease-in-out;
+
+        @media all and (max-width: 767px) {
+          font-size: 12px;
+        }
+      }
+
+      img {
+        width: 5px;
+        height: 9px;
+      }
+    }
+
+    &:hover {
+      .name_arrow {
+        height: 100%;
+        transition: height 250ms ease-in-out, background-color 250ms ease-in-out;
+        background-color: rgba(14, 41, 74, 0.3);
+
+        span {
+          flex: 1 1 100%;
+          font-size: 26px;
+          transition: flex 250ms ease-in-out, font-size 250ms ease-in-out;
+
+          @media all and (max-width: 767px) {
+            font-size: 16px;
+          }
+        }
+
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}
+// category end
+
 // feedback start
+
+.feed_back_wrap {
+  .headings {
+    margin-bottom: 60px;
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .title_h2 {
+    margin-bottom: 0;
+    text-align: left;
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .subtitle {
+    margin: 10px 0;
+    color: #0e294a;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+
+    @media all and (max-width: 767px) {
+      font-size: 10px;
+    }
+  }
+
+  .stars {
+    grid-gap: 12px;
+
+    img {
+      height: 20px;
+    }
+
+    p {
+      color: #0e294a;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
+
+.one_feedback {
+  box-shadow: 0 3px 10px rgba(14, 41, 74, 0.2);
+  background-color: #fff;
+  padding: 40px;
+  color: #0e294a;
+  font-weight: 700;
+  font-family: "Lapsus Pro";
+
+  @media all and (max-width: 767px) {
+    padding: 10px 10px 15px;
+  }
+
+  .inner_heading {
+    margin-bottom: 20px;
+    align-items: baseline;
+  }
+
+  h3 {
+    font-size: 35px;
+
+    @media all and (max-width: 767px) {
+      font-size: 26px;
+    }
+  }
+
+  .date {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+
+    @media all and (max-width: 767px) {
+      font-size: 10px;
+    }
+  }
+
+  .feedback {
+    font-size: 22px;
+
+    @media all and (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+
+  & + .one_feedback {
+    margin-top: 40px;
+
+    @media all and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+}
 // feedback end
