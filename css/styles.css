@@ -1456,6 +1456,10 @@ a h6 {
   justify-content: center;
 }
 
+.white {
+  color: #fff !important;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -2164,7 +2168,8 @@ menu {
 
 .grid_section .one,
 .grid_section .one a {
-  height: 250px;
+  height: 100%;
+  min-height: 250px;
   display: block;
   overflow: hidden;
 }
@@ -2527,7 +2532,7 @@ menu {
 }
 
 .title_h3 {
-  color: #fff;
+  color: #0e294a;
   font-family: Montserrat;
   font-size: 20px;
   font-weight: 600;

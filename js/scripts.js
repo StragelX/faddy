@@ -8,30 +8,34 @@ $(document).ready(function () {
     $(this).closest(".text_shortner").toggleClass("active");
   });
 
-  $(".main_top_slider").owlCarousel({
-    items: 2,
-    margin: 20,
-    loop: true,
-    nav: true,
-    dots: true,
-    slideBy: 1,
-    navText: ["<", ">"],
+  if ($(".main_top_slider").length) {
+    $(".main_top_slider").owlCarousel({
+      items: 2,
+      margin: 20,
+      loop: true,
+      nav: true,
+      dots: true,
+      slideBy: 1,
+      navText: ["<", ">"],
 
-    responsive: {
-      0: {
-        items: 1,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        1050: {
+          items: 2,
+        },
       },
-      1050: {
-        items: 2,
-      },
-    },
-  });
+    });
+  }
 
-  $(".products_carousel").owlCarousel({
-    items: 2.07,
-    margin: 10,
-    dots: false,
-  });
+  if ($(".products_carousel").length) {
+    $(".products_carousel").owlCarousel({
+      items: 2.07,
+      margin: 10,
+      dots: false,
+    });
+  }
 
   $(".quantity_wrap .minus").click(function () {
     var quantity = parseInt($(this).siblings("p").html());
