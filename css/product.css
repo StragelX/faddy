@@ -1,0 +1,229 @@
+@charset "UTF-8";
+.product_top_wrap {
+  align-items: stretch;
+  grid-gap: 20px;
+}
+
+@media all and (max-width: 1025px) {
+  .product_top_wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.product_top_wrap .img_wrap {
+  height: 500px;
+}
+
+@media all and (max-width: 767px) {
+  .product_top_wrap .img_wrap {
+    height: 328px;
+  }
+}
+
+.product_top_wrap .product_img {
+  flex: none;
+  width: 48%;
+  padding-top: 20px;
+}
+
+@media all and (max-width: 1025px) {
+  .product_top_wrap .product_img {
+    padding-top: 0;
+    width: 100%;
+  }
+}
+
+.product_top_wrap .product_img .price {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  background-color: #f26522;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Lapsus Pro";
+  font-size: 33px;
+  font-weight: 700;
+  cursor: default;
+}
+
+@media all and (max-width: 1025px) {
+  .product_top_wrap .product_img .price {
+    right: 15px;
+    bottom: -70px;
+    top: auto;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    color: #f26522;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .product_top_wrap .product_img .price {
+    font-size: 26px;
+    bottom: -50px;
+  }
+}
+
+.product_top_wrap .product_img .price:after {
+  content: "₴";
+  padding-left: 5px;
+}
+
+.product_top_wrap .tags_line {
+  grid-gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 60px;
+  margin-bottom: 70px;
+}
+
+@media all and (max-width: 1025px) {
+  .product_top_wrap .tags_line {
+    display: none;
+  }
+}
+
+.product_top_wrap .tag {
+  color: #fff;
+  font-family: "Lapsus Pro";
+  font-size: 25px;
+  font-weight: 700;
+  padding: 7px 15px;
+  border-radius: 20px;
+  background-color: #0e294a;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.product_top_wrap .tag:before {
+  content: "";
+  display: block;
+  flex: none;
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/star_filled_icon.svg") no-repeat center/contain;
+}
+
+.product_top_wrap .product_info_wrap {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  padding-bottom: 45px;
+}
+
+@media all and (max-width: 767px) {
+  .product_top_wrap .product_info_wrap {
+    padding-bottom: 0;
+  }
+}
+
+.product_top_wrap h1 {
+  color: #0e294a;
+  font-family: "Lapsus Pro";
+  font-size: 51px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+@media all and (max-width: 1025px) {
+  .product_top_wrap h1 {
+    padding-right: 100px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .product_top_wrap h1 {
+    font-size: 26px;
+  }
+}
+
+.product_top_wrap .desc {
+  color: #0e294a;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+@media all and (max-width: 767px) {
+  .product_top_wrap .desc {
+    font-size: 14px;
+  }
+}
+
+.product_top_wrap .extra_info {
+  justify-content: space-between;
+}
+
+@media all and (max-width: 1025px) {
+  .product_top_wrap .extra_info {
+    margin-bottom: 30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .product_top_wrap .extra_info {
+    flex-wrap: wrap;
+    grid-gap: 25px;
+  }
+}
+
+.product_top_wrap .extra_one {
+  color: #0e294a;
+  font-family: "Lapsus Pro";
+  font-size: 21px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: default;
+}
+
+@media all and (max-width: 767px) {
+  .product_top_wrap .extra_one {
+    font-size: 18px;
+  }
+}
+
+.product_top_wrap .extra_one::before {
+  content: "";
+  display: block;
+  flex: none;
+  margin-right: 15px;
+  width: 28px;
+  height: 28px;
+}
+
+.product_top_wrap .extra_one.weigth::before {
+  background: url("../img/weigth_icon.svg") no-repeat center/contain;
+}
+
+.product_top_wrap .extra_one.weigth:after {
+  content: " гр.";
+}
+
+.product_top_wrap .extra_one.calories::before {
+  background: url("../img/calories_icon.svg") no-repeat center/contain;
+}
+
+.product_top_wrap .extra_one.calories:after {
+  content: " кал.";
+}
+
+.product_top_wrap .extra_one.fat::before {
+  background: url("../img/fat_icon.svg") no-repeat center/contain;
+}
+
+.product_top_wrap .extra_one.fat:after {
+  content: " гр.";
+}
+
+.product_top_wrap .extra_one.gluten::before {
+  background: url("../img/gluten_icon.svg") no-repeat center/contain;
+}
+/*# sourceMappingURL=product.css.map */

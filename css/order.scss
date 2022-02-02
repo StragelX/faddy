@@ -1,0 +1,194 @@
+// order page start
+.order_wrap {
+  .order_h3 {
+    color: #0e294a;
+    font-family: "Lapsus Pro";
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+}
+
+.input_wrap {
+  margin-bottom: 40px;
+
+  input {
+    width: 100%;
+  }
+}
+
+.custom_radio {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  color: #0e294a;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+
+  input {
+    display: none;
+  }
+
+  span {
+    margin-right: 10px;
+    flex: none;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #0e294a;
+    background-color: transparent;
+    transition: background-color 180ms;
+  }
+
+  &:hover,
+  input:checked + span {
+    span {
+      background-color: #f26522;
+      transition: background-color 180ms;
+    }
+  }
+
+  input:checked + span {
+    background-color: #f26522;
+    transition: background-color 180ms;
+  }
+}
+
+.radio_group {
+  grid-gap: 50px;
+  margin-bottom: 50px;
+}
+
+.double_input {
+  grid-gap: 20px;
+
+  & > * {
+    max-width: calc(50% - 10px);
+  }
+
+  .default_btn {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+.scrollable_part {
+  padding-left: 80px;
+  max-width: 700px;
+
+  & > * {
+    width: 100%;
+  }
+
+  .input_wrap {
+    flex: 1 1 auto;
+  }
+}
+
+.my_bonus {
+  color: #f26522;
+  font-family: "Lapsus Pro";
+  font-size: 40px;
+  font-weight: 700;
+  padding-left: 20px;
+}
+
+.text {
+  color: #0e294a;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+
+  b {
+    font-weight: 700;
+  }
+
+  & + .text {
+    margin-top: 8px;
+  }
+}
+
+.static_part {
+  width: 770px;
+  max-height: calc(100vh - 250px);
+  position: fixed;
+  right: 20px;
+  top: 204px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.static_bottom {
+  flex: none;
+  margin-top: 40px;
+  padding-left: 70px;
+  padding-right: 30px;
+}
+
+.total_price {
+  justify-content: flex-end;
+  margin-bottom: 50px;
+
+  p {
+    color: #f26522;
+    font-family: "Lapsus Pro";
+    font-size: 37px;
+    font-weight: 700;
+
+    &::before {
+      content: "Сума:";
+      margin-right: 40px;
+      color: #0e294a;
+      font-family: "Lapsus Pro";
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    &:after {
+      content: " ₴";
+      padding-left: 5px;
+    }
+  }
+}
+
+.static_bottom_bottom {
+  justify-content: space-between;
+
+  .default_btn {
+    width: 396px;
+  }
+}
+
+.orders_wrap {
+  overflow: auto;
+  box-shadow: 3px 0 15px rgba(14, 41, 74, 0.2);
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0 30px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 5px;
+  }
+
+  .product_name {
+    color: #0e294a;
+    font-size: 24px;
+  }
+
+  .one_cart_item {
+    padding: 30px 0;
+  }
+
+  .one_cart_item + .one_cart_item {
+    padding-top: 30px;
+  }
+}
+// order page end

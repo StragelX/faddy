@@ -1603,13 +1603,19 @@ footer .voronin img {
 .input_wrap p {
   margin-left: 20px;
   margin-bottom: 10px;
-  color: #fff;
+  color: #0e294a;
   font-family: Montserrat;
   font-size: 18px;
   font-weight: 500;
 }
 
-.input_wrap input {
+.input_wrap p.tac {
+  margin-left: 0;
+  text-align: center;
+}
+
+.input_wrap input,
+.input_wrap textarea {
   width: 454px;
   height: 51px;
   line-height: 51px;
@@ -1621,6 +1627,189 @@ footer .voronin img {
   border-radius: 26px;
   background-color: #fff;
   border: 1px solid #f26522;
+}
+
+.input_wrap textarea {
+  width: 100%;
+  min-height: 102px;
+  resize: vertical;
+  line-height: 32px;
+}
+
+.one_cart_item {
+  display: flex;
+  padding: 30px;
+  align-items: stretch;
+}
+
+@media all and (max-width: 1400px) {
+  .one_cart_item {
+    padding: 20px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .one_cart_item {
+    padding: 30px 0;
+  }
+}
+
+.one_cart_item .img_wrap {
+  width: 250px;
+  height: 160px;
+  flex: none;
+}
+
+@media all and (max-width: 767px) {
+  .one_cart_item .img_wrap {
+    width: 110px;
+    height: 90px;
+  }
+}
+
+.one_cart_item .product_inner {
+  flex: 1 1 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media all and (max-width: 767px) {
+  .one_cart_item .product_inner {
+    padding: 0 15px;
+  }
+}
+
+.one_cart_item .product_name {
+  color: #fff;
+  font-family: "Lapsus Pro";
+  font-size: 38px;
+  font-weight: 700;
+}
+
+@media all and (max-width: 767px) {
+  .one_cart_item .product_name {
+    font-size: 20px;
+  }
+}
+
+.one_cart_item .price_remove_wrap {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.one_cart_item .price_remove_wrap .remove {
+  margin-top: 4px;
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  border: 1px solid #9fa9b7;
+  transition: opacity 180ms ease-in-out, border 180ms ease-in-out;
+}
+
+@media all and (max-width: 767px) {
+  .one_cart_item .price_remove_wrap .remove {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.one_cart_item .price_remove_wrap .remove svg {
+  width: 17px;
+  height: 19px;
+}
+
+@media all and (max-width: 767px) {
+  .one_cart_item .price_remove_wrap .remove svg {
+    width: 12px;
+    height: 13px;
+  }
+}
+
+.one_cart_item .price_remove_wrap .remove svg path {
+  fill: none;
+  stroke: #0e294a;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 20;
+  transition: stroke 180ms ease-in-out;
+}
+
+@media all and (min-width: 767px) {
+  .one_cart_item .price_remove_wrap .remove:hover {
+    opacity: 1;
+    border: 1px solid #f26522;
+    transition: opacity 180ms ease-in-out, border 180ms ease-in-out;
+  }
+  .one_cart_item .price_remove_wrap .remove:hover svg path {
+    stroke: #f26522;
+    transition: stroke 180ms ease-in-out;
+  }
+}
+
+.one_cart_item .price_remove_wrap .price {
+  color: #f26522;
+  font-family: "Lapsus Pro";
+  font-size: 37px;
+  font-weight: 700;
+}
+
+@media all and (max-width: 767px) {
+  .one_cart_item .price_remove_wrap .price {
+    font-size: 32px;
+  }
+}
+
+.one_cart_item .price_remove_wrap .price::after {
+  content: " ₴";
+}
+
+.one_cart_item + .one_cart_item {
+  border-top: 1px solid #f26522;
+  padding-top: 50px;
+}
+
+.default_btn {
+  text-align: center;
+  overflow: hidden;
+  background-color: #0e294a;
+  height: 50px;
+  width: 396px;
+  padding: 0 20px;
+  font-family: "Lapsus Pro";
+  color: #fff;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.default_btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: #f26522;
+  transition: width 360ms ease-in-out;
+}
+
+.default_btn:hover:after {
+  width: 100%;
+  transition: width 360ms ease-in-out;
+}
+
+.default_btn span {
+  z-index: 2;
 }
 
 section:last-of-type {
@@ -1809,6 +1998,89 @@ section + section {
   width: 26px;
   height: 26px;
   background: url("../img/cart_icon_hover.svg") no-repeat center/contain;
+}
+
+.quantity_wrap {
+  display: flex;
+  align-items: center;
+  grid-gap: 35px;
+  font-weight: 700;
+  font-family: "Lapsus Pro";
+}
+
+@media all and (max-width: 767px) {
+  .quantity_wrap {
+    grid-gap: 20px;
+  }
+}
+
+.quantity_wrap .quantity {
+  color: #f26522;
+  font-size: 31px;
+}
+
+@media all and (max-width: 767px) {
+  .quantity_wrap .quantity {
+    font-size: 20px;
+  }
+}
+
+.quantity_wrap button {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 3px 10px rgba(14, 41, 74, 0.2);
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f26522;
+  font-size: 46px;
+  opacity: 1;
+  transition: opacity 180ms ease-in-out;
+}
+
+@media all and (max-width: 767px) {
+  .quantity_wrap button {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.quantity_wrap button.disabled {
+  opacity: 0.3;
+  transition: opacity 180ms ease-in-out;
+  pointer-events: none;
+}
+
+@media all and (min-width: 767px) {
+  .quantity_wrap button:hover {
+    opacity: 0.7;
+    transition: opacity 180ms ease-in-out;
+  }
+}
+
+.quantity_wrap button span {
+  display: block;
+  height: 50px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 767px) {
+  .quantity_wrap button span {
+    height: 23px;
+  }
+}
+
+.quantity_wrap button.minus span {
+  height: 60px;
+}
+
+@media all and (max-width: 767px) {
+  .quantity_wrap button.minus span {
+    height: 27px;
+  }
 }
 
 @media all and (min-width: 1000px) {
@@ -2190,6 +2462,7 @@ menu {
 
 .grid_section .one.titling,
 .grid_section .one a.titling {
+  text-align: center;
   padding: 20%;
   display: flex;
   align-items: center;
@@ -3226,232 +3499,6 @@ menu {
   }
 }
 
-.cart_wrap .one_cart_item {
-  display: flex;
-  padding: 30px;
-  align-items: stretch;
-}
-
-@media all and (max-width: 1400px) {
-  .cart_wrap .one_cart_item {
-    padding: 20px;
-  }
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item {
-    padding: 30px 0;
-  }
-}
-
-.cart_wrap .one_cart_item .img_wrap {
-  width: 250px;
-  height: 160px;
-  flex: none;
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .img_wrap {
-    width: 110px;
-    height: 90px;
-  }
-}
-
-.cart_wrap .one_cart_item .product_inner {
-  flex: 1 1 auto;
-  padding: 0 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .product_inner {
-    padding: 0 15px;
-  }
-}
-
-.cart_wrap .one_cart_item .product_name {
-  color: #fff;
-  font-family: "Lapsus Pro";
-  font-size: 38px;
-  font-weight: 700;
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .product_name {
-    font-size: 20px;
-  }
-}
-
-.cart_wrap .one_cart_item .price_remove_wrap {
-  flex: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.cart_wrap .one_cart_item .price_remove_wrap .remove {
-  margin-top: 4px;
-  border-radius: 50%;
-  width: 33px;
-  height: 33px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.4;
-  transition: opacity 180ms ease-in-out, border 180ms ease-in-out;
-  border: 1px solid #fff;
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .price_remove_wrap .remove {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-.cart_wrap .one_cart_item .price_remove_wrap .remove svg {
-  width: 17px;
-  height: 19px;
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .price_remove_wrap .remove svg {
-    width: 12px;
-    height: 13px;
-  }
-}
-
-.cart_wrap .one_cart_item .price_remove_wrap .remove svg path {
-  fill: none;
-  stroke: #0e294a;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 20;
-  transition: stroke 180ms ease-in-out;
-}
-
-@media all and (min-width: 767px) {
-  .cart_wrap .one_cart_item .price_remove_wrap .remove:hover {
-    opacity: 1;
-    border: 1px solid #f26522;
-    transition: opacity 180ms ease-in-out, border 180ms ease-in-out;
-  }
-  .cart_wrap .one_cart_item .price_remove_wrap .remove:hover svg path {
-    stroke: #f26522;
-    transition: stroke 180ms ease-in-out;
-  }
-}
-
-.cart_wrap .one_cart_item .price_remove_wrap .price {
-  color: #f26522;
-  font-family: "Lapsus Pro";
-  font-size: 37px;
-  font-weight: 700;
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .price_remove_wrap .price {
-    font-size: 32px;
-  }
-}
-
-.cart_wrap .one_cart_item .price_remove_wrap .price::after {
-  content: " ₴";
-}
-
-.cart_wrap .one_cart_item .quantity_wrap {
-  display: flex;
-  align-items: center;
-  grid-gap: 35px;
-  font-weight: 700;
-  font-family: "Lapsus Pro";
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .quantity_wrap {
-    grid-gap: 20px;
-  }
-}
-
-.cart_wrap .one_cart_item .quantity_wrap .quantity {
-  color: #f26522;
-  font-size: 31px;
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .quantity_wrap .quantity {
-    font-size: 20px;
-  }
-}
-
-.cart_wrap .one_cart_item .quantity_wrap button {
-  width: 50px;
-  height: 50px;
-  box-shadow: 0 3px 10px rgba(14, 41, 74, 0.2);
-  background-color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #f26522;
-  font-size: 46px;
-  opacity: 1;
-  transition: opacity 180ms ease-in-out;
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .quantity_wrap button {
-    font-size: 20px;
-    width: 20px;
-    height: 20px;
-  }
-}
-
-.cart_wrap .one_cart_item .quantity_wrap button.disabled {
-  opacity: 0.3;
-  transition: opacity 180ms ease-in-out;
-  pointer-events: none;
-}
-
-@media all and (min-width: 767px) {
-  .cart_wrap .one_cart_item .quantity_wrap button:hover {
-    opacity: 0.7;
-    transition: opacity 180ms ease-in-out;
-  }
-}
-
-.cart_wrap .one_cart_item .quantity_wrap button span {
-  display: block;
-  height: 50px;
-  cursor: pointer;
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .quantity_wrap button span {
-    height: 23px;
-  }
-}
-
-.cart_wrap .one_cart_item .quantity_wrap button.minus span {
-  height: 60px;
-}
-
-@media all and (max-width: 767px) {
-  .cart_wrap .one_cart_item .quantity_wrap button.minus span {
-    height: 27px;
-  }
-}
-
-.cart_wrap .one_cart_item + .one_cart_item {
-  border-top: 1px solid #f26522;
-  padding-top: 50px;
-}
-
 .cart_wrap .scroll_wrap {
   max-height: calc(100% - 301px);
   overflow: auto;
@@ -3863,6 +3910,7 @@ menu {
 
 .feed_back_wrap .headings {
   margin-bottom: 60px;
+  align-items: flex-start;
 }
 
 @media all and (max-width: 767px) {

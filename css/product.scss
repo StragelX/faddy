@@ -1,0 +1,214 @@
+//  Product page start
+.product_top_wrap {
+  align-items: stretch;
+  grid-gap: 20px;
+
+  @media all and (max-width: 1025px) {
+    flex-wrap: wrap;
+  }
+
+  .img_wrap {
+    height: 500px;
+
+    @media all and (max-width: 767px) {
+      height: 328px;
+    }
+  }
+
+  .product_img {
+    flex: none;
+    width: 48%;
+    padding-top: 20px;
+
+    @media all and (max-width: 1025px) {
+      padding-top: 0;
+      width: 100%;
+    }
+
+    .price {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      top: -45px;
+      right: -45px;
+      background-color: #f26522;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: "Lapsus Pro";
+      font-size: 33px;
+      font-weight: 700;
+      cursor: default;
+
+      @media all and (max-width: 1025px) {
+        right: 15px;
+        bottom: -70px;
+        top: auto;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        color: #f26522;
+      }
+
+      @media all and (max-width: 767px) {
+        font-size: 26px;
+        bottom: -50px;
+      }
+
+      &:after {
+        content: "₴";
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .tags_line {
+    grid-gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    margin-bottom: 70px;
+
+    @media all and (max-width: 1025px) {
+      display: none;
+    }
+  }
+
+  .tag {
+    color: #fff;
+    font-family: "Lapsus Pro";
+    font-size: 25px;
+    font-weight: 700;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background-color: #0e294a;
+    white-space: nowrap;
+    cursor: default;
+
+    &:before {
+      content: "";
+      display: block;
+      flex: none;
+      margin-right: 15px;
+      width: 20px;
+      height: 20px;
+      background: url("../img/star_filled_icon.svg") no-repeat center / contain;
+    }
+  }
+
+  .product_info_wrap {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-bottom: 45px;
+
+    @media all and (max-width: 767px) {
+      padding-bottom: 0;
+    }
+
+    .default_btn {
+    }
+  }
+
+  h1 {
+    color: #0e294a;
+    font-family: "Lapsus Pro";
+    font-size: 51px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @media all and (max-width: 1025px) {
+      padding-right: 100px;
+    }
+
+    @media all and (max-width: 767px) {
+      font-size: 26px;
+    }
+  }
+
+  .desc {
+    color: #0e294a;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+
+    @media all and (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+
+  .extra_info {
+    justify-content: space-between;
+
+    @media all and (max-width: 1025px) {
+      margin-bottom: 30px;
+    }
+
+    @media all and (max-width: 767px) {
+      flex-wrap: wrap;
+      grid-gap: 25px;
+    }
+  }
+
+  .extra_one {
+    color: #0e294a;
+    font-family: "Lapsus Pro";
+    font-size: 21px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: default;
+
+    @media all and (max-width: 767px) {
+      font-size: 18px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      flex: none;
+      margin-right: 15px;
+      width: 28px;
+      height: 28px;
+    }
+
+    &.weigth {
+      &::before {
+        background: url("../img/weigth_icon.svg") no-repeat center / contain;
+      }
+
+      &:after {
+        content: " гр.";
+      }
+    }
+
+    &.calories {
+      &::before {
+        background: url("../img/calories_icon.svg") no-repeat center / contain;
+      }
+
+      &:after {
+        content: " кал.";
+      }
+    }
+
+    &.fat {
+      &::before {
+        background: url("../img/fat_icon.svg") no-repeat center / contain;
+      }
+
+      &:after {
+        content: " гр.";
+      }
+    }
+
+    &.gluten {
+      &::before {
+        background: url("../img/gluten_icon.svg") no-repeat center / contain;
+      }
+    }
+  }
+}
+//  Product page end
