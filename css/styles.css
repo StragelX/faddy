@@ -2444,6 +2444,9 @@ menu {
   min-height: 250px;
   display: block;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @media all and (max-width: 1400px) {
@@ -2491,16 +2494,6 @@ menu {
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 100% 50%);
   background-color: #f26522;
-}
-
-.grid_section .one .img_wrap,
-.grid_section .one a .img_wrap {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .grid_section .one .title_wrap,
@@ -2725,10 +2718,6 @@ menu {
   background-color: #f26522;
 }
 
-.mobile_products .product_link {
-  display: block;
-}
-
 .mobile_products .img_wrap {
   height: calc(51.7vw - 34px);
   margin-bottom: 10px;
@@ -2766,9 +2755,6 @@ menu {
 }
 
 .mobile_products .add_top_cart {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;

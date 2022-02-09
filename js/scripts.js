@@ -31,7 +31,7 @@ $(document).ready(function () {
 
   if ($(".products_carousel").length) {
     $(".products_carousel").owlCarousel({
-      items: 2.07,
+      items: 2,
       margin: 10,
       dots: false,
     });
