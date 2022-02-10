@@ -124,6 +124,19 @@
   }
 }
 
+@media all and (max-width: 1400px) {
+  .product_top_wrap .product_info_wrap .default_btn {
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .product_top_wrap .product_info_wrap .default_btn {
+    height: 30px;
+    width: 158px;
+  }
+}
+
 .product_top_wrap h1 {
   color: #0e294a;
   font-family: "Lapsus Pro";

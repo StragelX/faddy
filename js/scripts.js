@@ -12,7 +12,6 @@ $(document).ready(function () {
     $(".main_top_slider").owlCarousel({
       items: 2,
       margin: 20,
-      loop: true,
       nav: true,
       dots: true,
       slideBy: 1,

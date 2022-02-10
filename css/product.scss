@@ -109,6 +109,14 @@
     }
 
     .default_btn {
+      @media all and (max-width: 1400px) {
+        width: 300px;
+      }
+
+      @media all and (max-width: 767px) {
+        height: 30px;
+        width: 158px;
+      }
     }
   }
 

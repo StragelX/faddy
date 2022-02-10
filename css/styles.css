@@ -1812,6 +1812,12 @@ footer .voronin img {
   z-index: 2;
 }
 
+@media all and (max-width: 767px) {
+  .default_btn {
+    font-size: 14px;
+  }
+}
+
 section:last-of-type {
   margin-bottom: 160px;
 }
@@ -1916,6 +1922,7 @@ section + section {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 12;
 }
 
 @media all and (max-width: 1400px) {
@@ -1940,6 +1947,17 @@ section + section {
   display: none;
 }
 
+.call_menu_btn span {
+  opacity: 1;
+  transition: opacity 180ms;
+  pointer-events: all;
+}
+
+.call_menu_btn.active {
+  background-color: #fff;
+  transition: background-color 180ms;
+}
+
 .call_menu_btn.active:before, .call_menu_btn.active:after {
   display: none !important;
 }
@@ -1947,13 +1965,25 @@ section + section {
 .call_menu_btn.active svg {
   width: 17px;
   display: block;
+  fill: #0e294a;
+  transition: fill 180ms ease-in-out;
+}
+
+.call_menu_btn.active:hover {
+  border-color: #fff;
+  background-color: #0e294a;
+  transition: background-color 180ms;
+}
+
+.call_menu_btn.active:hover svg {
   fill: #fff;
   transition: fill 180ms ease-in-out;
 }
 
-.call_menu_btn.active:hover svg {
-  fill: #0e294a;
-  transition: fill 180ms ease-in-out;
+.call_menu_btn.active span {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms;
 }
 
 .call_cabinet {
@@ -2036,8 +2066,7 @@ section + section {
   justify-content: center;
   color: #f26522;
   font-size: 46px;
-  opacity: 1;
-  transition: opacity 180ms ease-in-out;
+  transition: background-color 180ms ease-in-out;
 }
 
 @media all and (max-width: 767px) {
@@ -2056,8 +2085,12 @@ section + section {
 
 @media all and (min-width: 767px) {
   .quantity_wrap button:hover {
-    opacity: 0.7;
-    transition: opacity 180ms ease-in-out;
+    background-color: #f26522;
+    transition: background-color 180ms ease-in-out;
+  }
+  .quantity_wrap button:hover span {
+    color: #fff;
+    transition: color 180ms;
   }
 }
 
@@ -2065,6 +2098,7 @@ section + section {
   display: block;
   height: 50px;
   cursor: pointer;
+  transition: color 180ms;
 }
 
 @media all and (max-width: 767px) {
@@ -2295,7 +2329,7 @@ menu {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10;
   height: 100px;
   box-shadow: 3px 0 15px rgba(14, 41, 74, 0.2);
   background-image: linear-gradient(180deg, #0e294a 0%, #000 100%);
@@ -3626,7 +3660,7 @@ menu {
 }
 
 .second_nav {
-  z-index: 9;
+  z-index: 11;
   position: fixed;
   top: 0;
   bottom: 0;
