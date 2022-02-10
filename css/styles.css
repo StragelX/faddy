@@ -2118,6 +2118,323 @@ section + section {
   }
 }
 
+.work_time {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  color: #0e294a;
+}
+
+.work_time .head {
+  display: table-header-group;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Lapsus Pro";
+}
+
+.work_time .head div {
+  display: table-cell;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f26522;
+}
+
+.work_time .head div:last-child {
+  width: 20%;
+}
+
+.work_time .head div:first-child {
+  padding-left: 10px;
+}
+
+.work_time .line {
+  display: table-row-group;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.work_time .line div {
+  display: table-cell;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f9b595;
+}
+
+.work_time .line div:first-child {
+  padding-left: 10px;
+}
+
+.mob_work_time div {
+  border-bottom: 2px solid #f9b595;
+  padding-bottom: 30px;
+}
+
+.mob_work_time div b {
+  margin-bottom: 15px;
+  color: #0e294a;
+  font-family: "Lapsus Pro";
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+}
+
+.mob_work_time div p {
+  color: #0e294a;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.mob_work_time div p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.mob_work_time div + div {
+  margin-top: 30px;
+}
+
+.for_personel_wrap {
+  justify-content: space-around;
+}
+
+@media all and (max-width: 767px) {
+  .for_personel_wrap {
+    flex-wrap: wrap;
+    grid-gap: 70px;
+  }
+}
+
+.for_personel_wrap .one_for_presonel {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 220px;
+}
+
+@media all and (max-width: 767px) {
+  .for_personel_wrap .one_for_presonel {
+    max-width: 100%;
+  }
+}
+
+.for_personel_wrap .img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 122px;
+  height: 122px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  border: 1px solid #0e294a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.for_personel_wrap p {
+  text-align: center;
+  color: #f26522;
+  font-family: "Lapsus Pro";
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 767px) {
+  .for_personel_wrap p {
+    display: block;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.benefits_grid {
+  display: grid;
+  grid-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+@media all and (max-width: 1400px) {
+  .benefits_grid {
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .benefits_grid {
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .benefits_grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media all and (max-width: 767px) {
+  .benefits_grid {
+    display: block;
+  }
+}
+
+.benefits_grid.payment {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+@media all and (max-width: 1400px) {
+  .benefits_grid.payment {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .benefits_grid.payment {
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .benefits_grid.payment {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+.benefits_grid .one {
+  overflow: hidden;
+  background-color: #0e294a;
+  height: 100%;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+@media all and (max-width: 767px) {
+  .benefits_grid .one + .one {
+    margin-top: 30px;
+  }
+}
+
+.benefits_grid .one::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  width: 75px;
+  height: 75px;
+  background-color: #f26522;
+}
+
+.benefits_grid .one .info {
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.benefits_grid .one .info .img {
+  border-radius: 50%;
+  width: 122px;
+  height: 122px;
+  background-color: #fff;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+@media all and (max-width: 1100px) {
+  .benefits_grid .one .info .img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.benefits_grid .one .info h3 {
+  color: #fff;
+  font-family: "Lapsus Pro";
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 1100px) {
+  .benefits_grid .one .info h3 {
+    font-size: 26px;
+  }
+}
+
+.benefits_grid .one .desc {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.terms {
+  color: #0e294a;
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+@media all and (max-width: 767px) {
+  .terms {
+    font-size: 14px;
+  }
+}
+
+.terms h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media all and (max-width: 767px) {
+  .terms h2 {
+    font-size: 14px;
+  }
+}
+
+.terms h2:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.terms p {
+  font-weight: 400;
+}
+
+.terms p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.terms ul,
+.terms ol {
+  list-style-position: inside;
+}
+
+.terms ul ::marker,
+.terms ol ::marker {
+  font-weight: 700;
+}
+
+.terms ul:not(:last-child),
+.terms ol:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.terms ul li + li,
+.terms ol li + li {
+  margin-top: 15px;
+}
+
 @media all and (min-width: 1000px) {
   nav {
     max-width: inherit;
