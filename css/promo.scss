@@ -1,0 +1,171 @@
+.grid_3_2 {
+  @media all and (max-width: 1025px) {
+    grid-gap: 80px 20px;
+  }
+  .one {
+    @media all and (max-width: 1025px) {
+      overflow: visible;
+    }
+
+    @media all and (max-width: 767px) {
+      display: block;
+      margin-bottom: 140px;
+    }
+
+    .default_btn {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      line-height: 50px;
+      opacity: 0;
+      transition: opacity 180ms;
+      pointer-events: none;
+
+      @media all and (max-width: 1400px) {
+        max-width: calc(100% - 20px);
+      }
+
+      @media all and (max-width: 1025px) {
+        opacity: 1;
+        pointer-events: all;
+        bottom: -65px;
+      }
+
+      @media all and (max-width: 767px) {
+        bottom: -80px;
+      }
+    }
+
+    .titling {
+      height: auto;
+    }
+
+    .title_wrap {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+
+    &:hover {
+      .default_btn {
+        opacity: 1;
+        transition: opacity 180ms;
+        pointer-events: all;
+      }
+
+      .title_wrap {
+        padding-bottom: 80px;
+
+        @media all and (max-width: 767px) {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .promo_text {
+    color: #fff;
+    font-family: "Lapsus Pro";
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media all and (max-width: 767px) {
+      font-size: 10px;
+    }
+  }
+}
+
+.promo_description_wrap {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 50px;
+  align-items: center;
+
+  @media all and (max-width: 767px) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 30px;
+  }
+
+  .logo {
+    margin-right: 65px;
+    width: 220px;
+    flex: none;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .info {
+    color: #0e294a;
+    font-family: Montserrat;
+    max-width: 920px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 25px;
+      margin-bottom: 20px;
+
+      @media all and (max-width: 767px) {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 25px;
+
+      @media all and (max-width: 767px) {
+        font-size: 14px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+
+    ol,
+    ul {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 25px;
+      list-style-position: inside;
+
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      ::marker {
+        font-weight: 700;
+      }
+
+      li {
+        & + li {
+          margin-top: 18px;
+        }
+      }
+    }
+
+    .default_btn {
+      display: block;
+      line-height: 50px;
+      width: 296px;
+      text-transform: uppercase;
+
+      @media all and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.promo_banner {
+  img {
+    width: 100%;
+  }
+}

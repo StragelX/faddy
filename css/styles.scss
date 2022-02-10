@@ -329,6 +329,7 @@ footer {
   color: #fff;
   font-size: 20px;
   border-radius: 5px;
+  max-width: 100%;
 
   &:after {
     content: "";
@@ -1048,8 +1049,8 @@ menu {
       min-height: 82px;
       padding-bottom: 10px;
       align-items: end;
-      transition: min-height 180ms ease-in-out,
-        background-color 180ms ease-in-out, padding-bottom 180ms ease-in-out;
+      transition: min-height 360ms ease-in-out,
+        background-color 360ms ease-in-out, padding-bottom 360ms ease-in-out;
 
       .left {
         padding-right: 15px;
@@ -1072,7 +1073,7 @@ menu {
         font-size: 25px;
         font-weight: 700;
         min-height: 62px;
-        transition: min-height 180ms ease-in-out;
+        transition: min-height 360ms ease-in-out;
 
         &:after {
           content: " ₴";
@@ -1083,7 +1084,7 @@ menu {
         overflow: hidden;
         height: 0;
         line-height: 40px;
-        transition: height 180ms ease-in-out;
+        transition: height 360ms ease-in-out;
       }
     }
 
@@ -1103,7 +1104,7 @@ menu {
       border-radius: 5px;
       pointer-events: none;
       opacity: 0;
-      transition: opacity 180ms ease-in-out;
+      transition: opacity 360ms ease-in-out;
 
       &:after {
         content: "";
@@ -1134,24 +1135,24 @@ menu {
         min-height: 100%;
         background-color: rgba(14, 41, 74, 0.3);
         padding-bottom: 60px;
-        transition: min-height 180ms ease-in-out,
-          background-color 180ms ease-in-out, padding-bottom 180ms;
+        transition: min-height 360ms ease-in-out,
+          background-color 360ms ease-in-out, padding-bottom 360ms;
 
         .desc {
           height: 30px;
-          transition: height 180ms ease-in-out;
+          transition: height 360ms ease-in-out;
         }
 
         .price {
           min-height: 91px;
-          transition: min-height 180ms ease-in-out;
+          transition: min-height 360ms ease-in-out;
         }
       }
 
       .add_to_cart {
         pointer-events: all;
         opacity: 1;
-        transition: opacity 180ms ease-in-out;
+        transition: opacity 360ms ease-in-out;
       }
     }
 
@@ -2345,9 +2346,6 @@ menu {
 
     @media all and (max-width: 767px) {
       margin-bottom: 40px;
-    }
-
-    .default_btn {
     }
   }
 

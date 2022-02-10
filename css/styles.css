@@ -1790,6 +1790,7 @@ footer .voronin img {
   color: #fff;
   font-size: 20px;
   border-radius: 5px;
+  max-width: 100%;
 }
 
 .default_btn:after {
@@ -2545,7 +2546,7 @@ menu {
   min-height: 82px;
   padding-bottom: 10px;
   align-items: end;
-  transition: min-height 180ms ease-in-out, background-color 180ms ease-in-out, padding-bottom 180ms ease-in-out;
+  transition: min-height 360ms ease-in-out, background-color 360ms ease-in-out, padding-bottom 360ms ease-in-out;
 }
 
 .grid_section .one .title_wrap .left,
@@ -2573,7 +2574,7 @@ menu {
   font-size: 25px;
   font-weight: 700;
   min-height: 62px;
-  transition: min-height 180ms ease-in-out;
+  transition: min-height 360ms ease-in-out;
 }
 
 .grid_section .one .title_wrap .price:after,
@@ -2586,7 +2587,7 @@ menu {
   overflow: hidden;
   height: 0;
   line-height: 40px;
-  transition: height 180ms ease-in-out;
+  transition: height 360ms ease-in-out;
 }
 
 .grid_section .one .add_to_cart,
@@ -2606,7 +2607,7 @@ menu {
   border-radius: 5px;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 180ms ease-in-out;
+  transition: opacity 360ms ease-in-out;
 }
 
 .grid_section .one .add_to_cart:after,
@@ -2638,21 +2639,21 @@ menu {
   min-height: 100%;
   background-color: rgba(14, 41, 74, 0.3);
   padding-bottom: 60px;
-  transition: min-height 180ms ease-in-out, background-color 180ms ease-in-out, padding-bottom 180ms;
+  transition: min-height 360ms ease-in-out, background-color 360ms ease-in-out, padding-bottom 360ms;
 }
 
 .grid_section .one.active .title_wrap .desc, .grid_section .one:hover .title_wrap .desc,
 .grid_section .one a.active .title_wrap .desc,
 .grid_section .one a:hover .title_wrap .desc {
   height: 30px;
-  transition: height 180ms ease-in-out;
+  transition: height 360ms ease-in-out;
 }
 
 .grid_section .one.active .title_wrap .price, .grid_section .one:hover .title_wrap .price,
 .grid_section .one a.active .title_wrap .price,
 .grid_section .one a:hover .title_wrap .price {
   min-height: 91px;
-  transition: min-height 180ms ease-in-out;
+  transition: min-height 360ms ease-in-out;
 }
 
 .grid_section .one.active .add_to_cart, .grid_section .one:hover .add_to_cart,
@@ -2660,7 +2661,7 @@ menu {
 .grid_section .one a:hover .add_to_cart {
   pointer-events: all;
   opacity: 1;
-  transition: opacity 180ms ease-in-out;
+  transition: opacity 360ms ease-in-out;
 }
 
 @media all and (min-width: 1300px) {

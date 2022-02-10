@@ -1,0 +1,190 @@
+@media all and (max-width: 1025px) {
+  .grid_3_2 {
+    grid-gap: 80px 20px;
+  }
+}
+
+@media all and (max-width: 1025px) {
+  .grid_3_2 .one {
+    overflow: visible;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .grid_3_2 .one {
+    display: block;
+    margin-bottom: 140px;
+  }
+}
+
+.grid_3_2 .one .default_btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  line-height: 50px;
+  opacity: 0;
+  transition: opacity 180ms;
+  pointer-events: none;
+}
+
+@media all and (max-width: 1400px) {
+  .grid_3_2 .one .default_btn {
+    max-width: calc(100% - 20px);
+  }
+}
+
+@media all and (max-width: 1025px) {
+  .grid_3_2 .one .default_btn {
+    opacity: 1;
+    pointer-events: all;
+    bottom: -65px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .grid_3_2 .one .default_btn {
+    bottom: -80px;
+  }
+}
+
+.grid_3_2 .one .titling {
+  height: auto;
+}
+
+.grid_3_2 .one .title_wrap {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.grid_3_2 .one:hover .default_btn {
+  opacity: 1;
+  transition: opacity 180ms;
+  pointer-events: all;
+}
+
+.grid_3_2 .one:hover .title_wrap {
+  padding-bottom: 80px;
+}
+
+@media all and (max-width: 767px) {
+  .grid_3_2 .one:hover .title_wrap {
+    padding-bottom: 20px;
+  }
+}
+
+.grid_3_2 .promo_text {
+  color: #fff;
+  font-family: "Lapsus Pro";
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 767px) {
+  .grid_3_2 .promo_text {
+    font-size: 10px;
+  }
+}
+
+.promo_description_wrap {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+@media all and (max-width: 767px) {
+  .promo_description_wrap {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 30px;
+  }
+}
+
+.promo_description_wrap .logo {
+  margin-right: 65px;
+  width: 220px;
+  flex: none;
+}
+
+.promo_description_wrap .logo img {
+  width: 100%;
+}
+
+.promo_description_wrap .info {
+  color: #0e294a;
+  font-family: Montserrat;
+  max-width: 920px;
+}
+
+.promo_description_wrap .info h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+@media all and (max-width: 767px) {
+  .promo_description_wrap .info h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.promo_description_wrap .info p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+@media all and (max-width: 767px) {
+  .promo_description_wrap .info p {
+    font-size: 14px;
+  }
+}
+
+.promo_description_wrap .info p:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.promo_description_wrap .info ol,
+.promo_description_wrap .info ul {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  list-style-position: inside;
+}
+
+.promo_description_wrap .info ol:not(:last-child),
+.promo_description_wrap .info ul:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.promo_description_wrap .info ol ::marker,
+.promo_description_wrap .info ul ::marker {
+  font-weight: 700;
+}
+
+.promo_description_wrap .info ol li + li,
+.promo_description_wrap .info ul li + li {
+  margin-top: 18px;
+}
+
+.promo_description_wrap .info .default_btn {
+  display: block;
+  line-height: 50px;
+  width: 296px;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 767px) {
+  .promo_description_wrap .info .default_btn {
+    width: 100%;
+  }
+}
+
+.promo_banner img {
+  width: 100%;
+}
+/*# sourceMappingURL=promo.css.map */
