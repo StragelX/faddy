@@ -180,6 +180,19 @@ footer {
     border: 1px solid #f26522;
   }
 
+  .show_pass {
+    position: absolute;
+    bottom: 17px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/show_pass.svg") no-repeat center / contain;
+  }
+
+  input {
+    padding-right: 10px;
+  }
+
   textarea {
     width: 100%;
     min-height: 102px;
@@ -930,6 +943,145 @@ section {
     }
   }
 }
+
+.empty_page_wrap {
+  margin-top: 10%;
+
+  @media all and (max-width: 1400px) {
+    margin-top: 5%;
+  }
+
+  @media all and (max-width: 1025px) {
+    margin-top: 20%;
+  }
+
+  @media all and (max-width: 768px) {
+    margin-top: 15%;
+  }
+
+  .e404 {
+    align-items: center;
+    color: #0e294a;
+    font-family: "Lapsus Pro";
+    font-size: 371px;
+    font-weight: 700;
+    letter-spacing: 18.55px;
+    line-height: 349px;
+    grid-gap: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    @media all and (max-width: 1400px) {
+      font-size: 350px;
+      line-height: 260px;
+      margin-bottom: 0;
+    }
+
+    @media all and (max-width: 1025px) {
+      margin-bottom: 50px;
+    }
+
+    @media all and (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
+    @media all and (max-width: 767px) {
+      font-size: 130px;
+      line-height: normal;
+      grid-gap: 0;
+    }
+
+    .logo {
+      width: 460px;
+      transform: scaleX(-1);
+      margin-right: -100px;
+      margin-top: -100px;
+
+      @media all and (max-width: 1400px) {
+        width: 300px;
+      }
+
+      @media all and (max-width: 767px) {
+        width: 130px;
+        flex: 1 1 auto;
+        margin-right: -50px;
+        margin-top: -30px;
+        margin-left: -20px;
+      }
+    }
+  }
+
+  h1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 802px;
+    color: #0e294a;
+    font-family: "Lapsus Pro";
+    font-size: 51px;
+    font-weight: 700;
+    letter-spacing: 2.55px;
+    line-height: 48px;
+
+    @media all and (max-width: 767px) {
+      font-size: 26px;
+      letter-spacing: 1.3px;
+      line-height: 24px;
+    }
+  }
+
+  .default_btn {
+    line-height: 50px;
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.cabinet_wrap {
+  align-items: flex-start;
+  grid-gap: 40px;
+
+  @media all and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+
+  .cabinet_block {
+    max-width: 455px;
+    flex: 1 1 auto;
+
+    @media all and (max-width: 767px) {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+
+    h2 {
+      color: #0e294a;
+      font-family: "Lapsus Pro";
+      font-size: 35px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    .input_wrap {
+      & + .input_wrap {
+        margin-top: 40px;
+      }
+    }
+
+    input {
+      width: 100%;
+    }
+
+    .default_btn {
+      margin-top: 40px;
+      width: 260px;
+    }
+  }
+}
+
 // manu start
 nav {
   @media all and (min-width: 1000px) {

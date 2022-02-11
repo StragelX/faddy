@@ -68,4 +68,12 @@ $(document).ready(function () {
     $(this).toggleClass("active");
     $(".second_nav").toggleClass("active");
   });
+
+  $(".show_pass").click(function () {
+    if ($(this).siblings("input").attr("type") == "password") {
+      $(this).siblings("input").prop("type", "text");
+    } else {
+      $(this).siblings("input").prop("type", "password");
+    }
+  });
 });
