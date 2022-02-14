@@ -24,6 +24,7 @@
   right: 10px;
   line-height: 50px;
   opacity: 0;
+  -webkit-transition: opacity 180ms;
   transition: opacity 180ms;
   pointer-events: none;
 }
@@ -53,12 +54,14 @@
 }
 
 .grid_3_2 .one .title_wrap {
+  height: 110px;
   padding-bottom: 20px;
   padding-top: 20px;
 }
 
 .grid_3_2 .one:hover .default_btn {
   opacity: 1;
+  -webkit-transition: opacity 180ms;
   transition: opacity 180ms;
   pointer-events: all;
 }
@@ -91,7 +94,9 @@
   padding-left: 30px;
   padding-right: 30px;
   margin-top: 50px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media all and (max-width: 767px) {
@@ -105,7 +110,9 @@
 .promo_description_wrap .logo {
   margin-right: 65px;
   width: 220px;
-  flex: none;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
 .promo_description_wrap .logo img {

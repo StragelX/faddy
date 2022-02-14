@@ -1301,7 +1301,6 @@ menu {
   display: none;
   align-items: flex-start;
   overflow-x: auto;
-  overflow-y: hidden;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -1440,6 +1439,10 @@ menu {
 
     @media all and (max-width: 1400px) {
       height: 200px;
+    }
+
+    @media all and (max-width: 1300px) {
+      min-height: 250px;
     }
 
     &.titling {
