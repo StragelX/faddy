@@ -1,18 +1,13 @@
 @charset "UTF-8";
 .faddy_quotte {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 160px;
 }
 
 @media all and (max-width: 1000px) {
   .faddy_quotte {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -24,9 +19,7 @@
 
 .faddy_quotte .logo {
   width: 450px;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
   margin-right: 20px;
 }
 
@@ -89,9 +82,7 @@
 
 @media all and (max-width: 1000px) {
   .faddy_quotte blockquote {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    flex: 1 1 100%;
     width: 100%;
     max-width: 100%;
   }

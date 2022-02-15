@@ -76,4 +76,22 @@ $(document).ready(function () {
       $(this).siblings("input").prop("type", "password");
     }
   });
+
+  const scrollElement = document.querySelector(".scrollable_part");
+
+  document.addEventListener(
+    "scroll",
+    (event) => {
+      var top = window.pageYOffset || document.documentElement.scrollTop;
+
+      console.log(top);
+
+      if (top > 208) {
+        $(".static_part").addClass("fixed");
+      } else {
+        $(".static_part").removeClass("fixed");
+      }
+    },
+    { passive: true }
+  );
 });

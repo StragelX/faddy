@@ -7,6 +7,20 @@
   margin-bottom: 40px;
 }
 
+@media all and (max-width: 1400px) {
+  .order_wrap .order_h3 h2 {
+    order: 1;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .order_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 .input_wrap {
   margin-bottom: 40px;
 }
@@ -16,13 +30,9 @@
 }
 
 .custom_radio {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #0e294a;
   font-family: Montserrat;
   font-size: 18px;
@@ -35,29 +45,24 @@
 
 .custom_radio span {
   margin-right: 10px;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
   cursor: pointer;
   width: 15px;
   height: 15px;
   border-radius: 50%;
   border: 2px solid #0e294a;
   background-color: transparent;
-  -webkit-transition: background-color 180ms;
   transition: background-color 180ms;
 }
 
 .custom_radio:hover span,
 .custom_radio input:checked + span span {
   background-color: #f26522;
-  -webkit-transition: background-color 180ms;
   transition: background-color 180ms;
 }
 
 .custom_radio input:checked + span {
   background-color: #f26522;
-  -webkit-transition: background-color 180ms;
   transition: background-color 180ms;
 }
 
@@ -88,6 +93,8 @@
   .scrollable_part {
     max-width: 100%;
     padding-right: 80px;
+    order: 3;
+    margin-top: 80px;
   }
 }
 
@@ -103,9 +110,7 @@
 }
 
 .scrollable_part .input_wrap {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .my_bonus {
@@ -133,20 +138,31 @@
 
 .static_part {
   width: 770px;
-  max-height: calc(100vh - 250px);
-  position: fixed;
-  right: 20px;
-  top: 204px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  max-height: calc(100vh - 70px);
+  position: absolute;
+  right: 0;
+  top: 129px;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.static_part.fixed {
+  position: fixed;
+  top: 0;
+  right: 20px;
+}
+
+@media all and (max-width: 1400px) {
+  .static_part.fixed {
+    position: relative;
+    position: relative;
+    width: auto;
+    right: auto;
+    top: auto;
+    margin: 0;
+    order: 2;
+  }
 }
 
 @media all and (max-width: 1400px) {
@@ -155,30 +171,28 @@
     width: auto;
     right: auto;
     top: auto;
-    margin: 60px 80px 0;
+    margin: 0;
     max-height: unset;
-  }
-}
-
-@media all and (max-width: 1100px) {
-  .static_part {
-    margin: 60px 0 0;
+    margin-top: 0;
   }
 }
 
 .static_bottom {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
   margin-top: 40px;
   padding-left: 70px;
   padding-right: 30px;
 }
 
+@media all and (max-width: 1400px) {
+  .static_bottom {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .total_price {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   margin-bottom: 50px;
 }
 
@@ -204,9 +218,7 @@
 }
 
 .static_bottom_bottom {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .static_bottom_bottom .default_btn {
@@ -215,11 +227,17 @@
 
 .orders_wrap {
   overflow: auto;
-  -webkit-box-shadow: 3px 0 15px rgba(14, 41, 74, 0.2);
-          box-shadow: 3px 0 15px rgba(14, 41, 74, 0.2);
+  box-shadow: 3px 0 15px rgba(14, 41, 74, 0.2);
   border-radius: 4px;
   background-color: #fff;
   padding: 0 30px;
+}
+
+@media all and (max-width: 1400px) {
+  .orders_wrap {
+    box-shadow: none;
+    padding: 0;
+  }
 }
 
 .orders_wrap::-webkit-scrollbar {
@@ -242,5 +260,11 @@
 
 .orders_wrap .one_cart_item + .one_cart_item {
   padding-top: 30px;
+}
+
+@media all and (max-width: 1400px) {
+  .orders_wrap .price_remove_wrap .price {
+    margin-right: 5px;
+  }
 }
 /*# sourceMappingURL=order.css.map */

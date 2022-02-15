@@ -1,13 +1,7 @@
 .point_info_line {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 50px;
   max-width: 57%;
 }
@@ -15,31 +9,24 @@
 @media all and (max-width: 1800px) {
   .point_info_line {
     max-width: 100%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
     grid-gap: 40px;
   }
 }
 
 @media all and (max-width: 1100px) {
   .point_info_line {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .point_info_line > * {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 }
 
 .point_info_line img {
   width: 33px;
   height: 33px;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
   margin-right: 20px;
 }
 
@@ -48,34 +35,27 @@
   font-family: "Lapsus Pro";
   font-size: 20px;
   font-weight: 700;
-  -webkit-transition: color 180ms;
   transition: color 180ms;
 }
 
 .point_info_line a:hover {
   color: #f26522;
-  -webkit-transition: color 180ms;
   transition: color 180ms;
 }
 
 .contacts_map_wrap {
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  align-items: stretch;
 }
 
 @media all and (max-width: 1100px) {
   .contacts_map_wrap {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
 .contacts_map_wrap .map {
   background-color: #0e294a;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
   max-width: 57%;
   margin-right: 7%;
 }
@@ -84,9 +64,7 @@
   .contacts_map_wrap .map {
     margin-right: 0;
     max-width: 100%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+    flex: 1 1 100%;
     margin-bottom: 50px;
     height: 450px;
   }
