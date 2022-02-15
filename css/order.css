@@ -25,6 +25,12 @@
   margin-bottom: 40px;
 }
 
+@media all and (max-width: 767px) {
+  .input_wrap p.tac {
+    text-align: left;
+  }
+}
+
 .input_wrap input {
   width: 100%;
 }
@@ -71,12 +77,31 @@
   margin-bottom: 50px;
 }
 
+@media all and (max-width: 767px) {
+  .radio_group {
+    grid-gap: inherit;
+    justify-content: space-between;
+  }
+}
+
 .double_input {
   grid-gap: 20px;
 }
 
+@media all and (max-width: 767px) {
+  .double_input {
+    display: block;
+  }
+}
+
 .double_input > * {
   max-width: calc(50% - 10px);
+}
+
+@media all and (max-width: 767px) {
+  .double_input > * {
+    max-width: 100%;
+  }
 }
 
 .double_input .default_btn {
@@ -189,6 +214,26 @@
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.static_bottom.mobile {
+  order: 4;
+}
+
+.static_bottom.mobile .custom_radio {
+  padding-bottom: 45px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f26522;
+}
+
+.static_bottom.mobile .total_price p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.static_bottom.mobile .total_price p::before {
+  flex: 1 1 auto;
 }
 
 .total_price {
