@@ -1,0 +1,473 @@
+.modal_overlay {
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 30;
+  opacity: 0;
+  transition: opacity 180ms;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    transition: opacity 180ms;
+    pointer-events: all;
+  }
+
+  .modal_inner {
+    min-height: 100vh;
+    padding: 10vh 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media all and (max-width: 767px) {
+      padding: 0 10px;
+    }
+  }
+
+  .modal {
+    padding: 40px;
+    box-shadow: 0 3px 10px rgba(14, 41, 74, 0.2);
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 180ms;
+    pointer-events: none;
+    display: none;
+
+    @media all and (max-width: 767px) {
+      padding: 70px 10px 40px;
+    }
+
+    &.active {
+      display: block;
+      opacity: 1;
+      transition: opacity 180ms;
+      pointer-events: all;
+    }
+
+    .close_btn:not(.default_btn) {
+      z-index: 10;
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      width: 20px;
+      height: 20px;
+      opacity: 0.5;
+      transition: opacity 180ms;
+
+      @media all and (max-width: 1000px) {
+        top: 15px;
+        right: 15px;
+      }
+
+      &::before {
+        content: "X";
+        color: #0e294a;
+        font-family: "Lapsus Pro";
+        font-size: 35px;
+        font-weight: 700;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        @media all and (max-width: 767px) {
+          font-size: 24px;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 180ms;
+      }
+    }
+
+    .default_btn {
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 50px;
+    }
+  }
+
+  h3 {
+    font-size: 35px;
+    margin-bottom: 50px;
+    text-align: center;
+
+    @media all and (max-width: 1000px) {
+      font-size: 26px;
+      letter-spacing: 1.3px;
+      line-height: 24px;
+    }
+  }
+
+  .default_btn {
+    display: block;
+
+    @media all and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  .input_wrap {
+    p {
+      @media all and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+
+    & + .input_wrap {
+      margin-top: 40px;
+    }
+
+    input {
+      @media all and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
+
+  #thanks {
+    width: 928px;
+
+    h3 {
+      font-size: 56px;
+      margin-bottom: 105px;
+
+      @media all and (max-width: 1000px) {
+        font-size: 26px;
+        margin-bottom: 160px;
+      }
+    }
+
+    p {
+      color: #0e294a;
+      font-family: "Lapsus Pro";
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: 1.25px;
+      text-align: center;
+
+      @media all and (max-width: 1000px) {
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 24px;
+      }
+    }
+
+    p {
+      max-width: 450px;
+      margin-bottom: 110px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media all and (max-width: 1000px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .logo {
+      position: absolute;
+      width: 220px;
+      top: 55px;
+      left: 15px;
+
+      @media all and (max-width: 1000px) {
+        width: 160px;
+        left: 41%;
+        top: 80px;
+      }
+
+      @media all and (max-width: 767px) {
+        left: 29%;
+        top: 100px;
+      }
+    }
+  }
+
+  #extra_products {
+    .bottom {
+      margin-top: 70px;
+      grid-gap: 20px;
+      justify-content: space-around;
+
+      @media all and (max-width: 767px) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+      }
+
+      .default_btn {
+        margin-left: 0;
+        margin-right: 0;
+
+        @media all and (max-width: 1000px) {
+          width: auto;
+        }
+      }
+
+      .close {
+        color: #0e294a;
+        font-family: "Lapsus Pro";
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 1.25px;
+        text-decoration: underline;
+
+        @media all and (max-width: 767px) {
+          font-size: 16px;
+          letter-spacing: 0.8px;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  #forgote {
+    .text {
+      max-width: 454px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+    }
+
+    .input_wrap {
+      margin-bottom: 60px;
+    }
+  }
+
+  .extrad_prod_grid {
+    display: grid;
+    grid-gap: 20px;
+    align-items: stretch;
+    grid-template-columns: repeat(3, 290px);
+
+    @media all and (max-width: 1000px) {
+      display: block;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .owl-dots {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .one_extra {
+      display: block;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 180ms;
+
+      &:hover {
+        opacity: 0.7;
+        transition: opacity 180ms;
+
+        .input_marker {
+          background-color: #f26522;
+          transition: background-color 180ms;
+        }
+      }
+
+      input {
+        display: none;
+      }
+
+      .input_marker {
+        width: 24px;
+        height: 24px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 2px solid #0e294a;
+        position: absolute;
+        z-index: 1;
+        top: 12px;
+        right: 12px;
+        transition: background-color 180ms;
+      }
+
+      input:checked + .input_marker {
+        background-color: #f26522;
+        transition: background-color 180ms;
+      }
+
+      .img_wrap {
+        height: 250px;
+      }
+
+      .prod_info {
+        padding: 10px 10px 0;
+        color: #0e294a;
+
+        .class {
+          font-family: Montserrat;
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        .price {
+          color: #0e294a;
+          font-family: "Lapsus Pro";
+          font-size: 25px;
+          font-weight: 700;
+
+          &::after {
+            content: " ₴";
+            margin-left: 5px;
+          }
+        }
+
+        .name {
+          font-family: Montserrat;
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  #login {
+    .default_btn {
+      margin-top: 60px;
+    }
+  }
+
+  #rate {
+    .default_btn {
+      margin-top: 40px;
+    }
+  }
+
+  .extra_link {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    color: #0e294a;
+    font-family: "Lapsus Pro";
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.75px;
+
+    @media all and (max-width: 767px) {
+      margin-top: 30px;
+    }
+
+    button {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .legal_wrap {
+    max-width: 454px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #0e294a;
+    margin-top: 40px;
+
+    @media all and (max-width: 767px) {
+      font-size: 14px;
+    }
+
+    .link {
+      display: inline;
+      color: #f26522;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .btns_line {
+    grid-gap: 20px;
+    max-width: 540px;
+
+    .default_btn {
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    .default_btn.light {
+      border: 2px solid #3b5998;
+      background-color: transparent;
+      transition: border 360ms;
+
+      span {
+        transition: color 360ms;
+        color: #3b5998;
+      }
+
+      &:hover {
+        transition: border 360ms;
+        border: 2px solid #f26522;
+
+        span {
+          transition: color 360ms;
+          color: #fff;
+        }
+      }
+    }
+
+    &.second {
+      @media all and (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .divider {
+    color: #0e294a;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    grid-gap: 20px;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &::before,
+    &:after {
+      content: "";
+      display: block;
+      background-color: #f26522;
+      flex: 1 1 auto;
+      height: 2px;
+    }
+  }
+
+  .stars {
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 50px;
+    grid-gap: 24px;
+
+    img {
+      height: 40px;
+    }
+  }
+
+  #registrate {
+    .default_btn {
+      margin-top: 60px;
+
+      @media all and (max-width: 767px) {
+        margin-top: 45px;
+      }
+    }
+  }
+}

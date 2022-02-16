@@ -1153,6 +1153,501 @@ a h6 {
   }
 }
 
+.modal_overlay {
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 30;
+  opacity: 0;
+  transition: opacity 180ms;
+  pointer-events: none;
+}
+
+.modal_overlay.active {
+  opacity: 1;
+  transition: opacity 180ms;
+  pointer-events: all;
+}
+
+.modal_overlay .modal_inner {
+  min-height: 100vh;
+  padding: 10vh 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay .modal_inner {
+    padding: 0 10px;
+  }
+}
+
+.modal_overlay .modal {
+  padding: 40px;
+  box-shadow: 0 3px 10px rgba(14, 41, 74, 0.2);
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 180ms;
+  pointer-events: none;
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay .modal {
+    padding: 70px 10px 40px;
+  }
+}
+
+.modal_overlay .modal.active {
+  display: block;
+  opacity: 1;
+  transition: opacity 180ms;
+  pointer-events: all;
+}
+
+.modal_overlay .modal .close_btn:not(.default_btn) {
+  z-index: 10;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  transition: opacity 180ms;
+}
+
+@media all and (max-width: 1000px) {
+  .modal_overlay .modal .close_btn:not(.default_btn) {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.modal_overlay .modal .close_btn:not(.default_btn)::before {
+  content: "X";
+  color: #0e294a;
+  font-family: "Lapsus Pro";
+  font-size: 35px;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay .modal .close_btn:not(.default_btn)::before {
+    font-size: 24px;
+  }
+}
+
+.modal_overlay .modal .close_btn:not(.default_btn):hover {
+  opacity: 1;
+  transition: opacity 180ms;
+}
+
+.modal_overlay .modal .default_btn {
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 50px;
+}
+
+.modal_overlay h3 {
+  font-size: 35px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+@media all and (max-width: 1000px) {
+  .modal_overlay h3 {
+    font-size: 26px;
+    letter-spacing: 1.3px;
+    line-height: 24px;
+  }
+}
+
+.modal_overlay .default_btn {
+  display: block;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay .default_btn {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay .input_wrap p {
+    font-size: 14px;
+  }
+}
+
+.modal_overlay .input_wrap + .input_wrap {
+  margin-top: 40px;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay .input_wrap input {
+    width: 100%;
+  }
+}
+
+.modal_overlay #thanks {
+  width: 928px;
+}
+
+.modal_overlay #thanks h3 {
+  font-size: 56px;
+  margin-bottom: 105px;
+}
+
+@media all and (max-width: 1000px) {
+  .modal_overlay #thanks h3 {
+    font-size: 26px;
+    margin-bottom: 160px;
+  }
+}
+
+.modal_overlay #thanks p {
+  color: #0e294a;
+  font-family: "Lapsus Pro";
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+  text-align: center;
+}
+
+@media all and (max-width: 1000px) {
+  .modal_overlay #thanks p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 24px;
+  }
+}
+
+.modal_overlay #thanks p {
+  max-width: 450px;
+  margin-bottom: 110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media all and (max-width: 1000px) {
+  .modal_overlay #thanks p {
+    margin-bottom: 30px;
+  }
+}
+
+.modal_overlay #thanks .logo {
+  position: absolute;
+  width: 220px;
+  top: 55px;
+  left: 15px;
+}
+
+@media all and (max-width: 1000px) {
+  .modal_overlay #thanks .logo {
+    width: 160px;
+    left: 41%;
+    top: 80px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay #thanks .logo {
+    left: 29%;
+    top: 100px;
+  }
+}
+
+.modal_overlay #extra_products .bottom {
+  margin-top: 70px;
+  grid-gap: 20px;
+  justify-content: space-around;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay #extra_products .bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 50px;
+  }
+}
+
+.modal_overlay #extra_products .bottom .default_btn {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media all and (max-width: 1000px) {
+  .modal_overlay #extra_products .bottom .default_btn {
+    width: auto;
+  }
+}
+
+.modal_overlay #extra_products .bottom .close {
+  color: #0e294a;
+  font-family: "Lapsus Pro";
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+  text-decoration: underline;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay #extra_products .bottom .close {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+  }
+}
+
+.modal_overlay #extra_products .bottom .close:hover {
+  text-decoration: none;
+}
+
+.modal_overlay #forgote .text {
+  max-width: 454px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.modal_overlay #forgote .input_wrap {
+  margin-bottom: 60px;
+}
+
+.modal_overlay .extrad_prod_grid {
+  display: grid;
+  grid-gap: 20px;
+  align-items: stretch;
+  grid-template-columns: repeat(3, 290px);
+}
+
+@media all and (max-width: 1000px) {
+  .modal_overlay .extrad_prod_grid {
+    display: block;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.modal_overlay .extrad_prod_grid .owl-dots {
+  margin-left: 0;
+  text-align: center;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra {
+  display: block;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 180ms;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra:hover {
+  opacity: 0.7;
+  transition: opacity 180ms;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra:hover .input_marker {
+  background-color: #f26522;
+  transition: background-color 180ms;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra input {
+  display: none;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra .input_marker {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #0e294a;
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  right: 12px;
+  transition: background-color 180ms;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra input:checked + .input_marker {
+  background-color: #f26522;
+  transition: background-color 180ms;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra .img_wrap {
+  height: 250px;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra .prod_info {
+  padding: 10px 10px 0;
+  color: #0e294a;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra .prod_info .class {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra .prod_info .price {
+  color: #0e294a;
+  font-family: "Lapsus Pro";
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra .prod_info .price::after {
+  content: " ₴";
+  margin-left: 5px;
+}
+
+.modal_overlay .extrad_prod_grid .one_extra .prod_info .name {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.modal_overlay #login .default_btn {
+  margin-top: 60px;
+}
+
+.modal_overlay #rate .default_btn {
+  margin-top: 40px;
+}
+
+.modal_overlay .extra_link {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  color: #0e294a;
+  font-family: "Lapsus Pro";
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay .extra_link {
+    margin-top: 30px;
+  }
+}
+
+.modal_overlay .extra_link button {
+  text-decoration: underline;
+}
+
+.modal_overlay .extra_link button:hover {
+  text-decoration: none;
+}
+
+.modal_overlay .legal_wrap {
+  max-width: 454px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #0e294a;
+  margin-top: 40px;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay .legal_wrap {
+    font-size: 14px;
+  }
+}
+
+.modal_overlay .legal_wrap .link {
+  display: inline;
+  color: #f26522;
+  text-decoration: underline;
+}
+
+.modal_overlay .legal_wrap .link:hover {
+  text-decoration: none;
+}
+
+.modal_overlay .btns_line {
+  grid-gap: 20px;
+  max-width: 540px;
+}
+
+.modal_overlay .btns_line .default_btn span {
+  text-transform: uppercase;
+}
+
+.modal_overlay .btns_line .default_btn.light {
+  border: 2px solid #3b5998;
+  background-color: transparent;
+  transition: border 360ms;
+}
+
+.modal_overlay .btns_line .default_btn.light span {
+  transition: color 360ms;
+  color: #3b5998;
+}
+
+.modal_overlay .btns_line .default_btn.light:hover {
+  transition: border 360ms;
+  border: 2px solid #f26522;
+}
+
+.modal_overlay .btns_line .default_btn.light:hover span {
+  transition: color 360ms;
+  color: #fff;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay .btns_line.second {
+    flex-direction: column;
+  }
+}
+
+.modal_overlay .divider {
+  color: #0e294a;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  grid-gap: 20px;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.modal_overlay .divider::before, .modal_overlay .divider:after {
+  content: "";
+  display: block;
+  background-color: #f26522;
+  flex: 1 1 auto;
+  height: 2px;
+}
+
+.modal_overlay .stars {
+  cursor: pointer;
+  justify-content: center;
+  margin-bottom: 50px;
+  grid-gap: 24px;
+}
+
+.modal_overlay .stars img {
+  height: 40px;
+}
+
+.modal_overlay #registrate .default_btn {
+  margin-top: 60px;
+}
+
+@media all and (max-width: 767px) {
+  .modal_overlay #registrate .default_btn {
+    margin-top: 45px;
+  }
+}
+
 /*
  *  Owl Carousel - Core
  */

@@ -36,6 +36,14 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".modal_carousel").length) {
+    $(".modal_carousel").owlCarousel({
+      items: 1,
+      margin: 10,
+      dots: true,
+    });
+  }
+
   $(".quantity_wrap .minus").click(function () {
     var quantity = parseInt($(this).siblings("p").html());
     quantity == 1 ? (quantity = 1) : quantity--;
@@ -76,6 +84,29 @@ $(document).ready(function () {
       $(this).siblings("input").prop("type", "password");
     }
   });
+
+  $(".modal_overlay .close").click(function () {
+    $(this).closest(".modal_overlay").removeClass("active");
+    $(this).closest(".modal").removeClass("active");
+    $("body").removeClass("no_scroll");
+  });
+
+  $(".call_modal").click(function () {
+    var id = $(this).attr("data-id");
+    $(".modal_overlay").addClass("active");
+    $("body").addClass("no_scroll");
+    $(".modal").each(function () {
+      if ($(this).attr("id") == id) {
+        $(this).addClass("active");
+      }
+    });
+  });
+
+  if ($(".my-rating").length) {
+    $(".my-rating").starRating({
+      initialRating: 3,
+    });
+  }
 
   const scrollElement = document.querySelector(".scrollable_part");
 
