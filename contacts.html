@@ -659,5 +659,381 @@
             </div>
         </div>
     </div>
+
+    <div class="modal_overlay">
+        <div class="modal_inner">
+            <div class="modal" id="thanks">
+                <button class="close close_btn"></button>
+
+                <img src="img/logo.svg" alt="" class="logo">
+
+                <h3 class="title_h2">Подякували!</h3>
+
+                <p>Федді вже перевіряє замовлення і везе його Вам до порогу.</p>
+
+                <a href="/" class="default_btn">
+                    <span>На головну</span>
+                </a>
+            </div>  
+
+            <div class="modal" id="extra_products">
+                <button class="close close_btn"></button>
+
+                <h3 class="title_h2">Додати до страви</h3>
+
+                <div class="s_hide m_hide extrad_prod_grid">
+                    <label class="one_extra" for="t1">
+                        <input type="checkbox" name="t1" id="t1">
+
+                        <div class="input_marker"></div>
+
+                        <div class="img_wrap"><img src="img/category_link_temp_img.jpg" alt=""></div>
+
+                        <div class="prod_info">
+                            <div class="df s_betwen">
+                                <span class="class">Напої:</span>
+
+                                <p class="price">35</p>
+                            </div>
+
+                            <div class="name">Pepsi скло</div>
+                        </div>
+                    </label>
+
+                    <label class="one_extra" for="t2">
+                        <input type="checkbox" name="t2" id="t2">
+
+                        <div class="input_marker"></div>
+
+                        <div class="img_wrap"><img src="img/category_link_temp_img.jpg" alt=""></div>
+
+                        <div class="prod_info">
+                            <div class="df s_betwen">
+                                <span class="class">Напої:</span>
+
+                                <p class="price">35</p>
+                            </div>
+
+                            <div class="name">Pepsi скло</div>
+                        </div>
+                    </label>
+
+                    <label class="one_extra" for="t3">
+                        <input type="checkbox" name="t3" id="t3">
+
+                        <div class="input_marker"></div>
+
+                        <div class="img_wrap"><img src="img/category_link_temp_img.jpg" alt=""></div>
+
+                        <div class="prod_info">
+                            <div class="df s_betwen">
+                                <span class="class">Напої:</span>
+
+                                <p class="price">35</p>
+                            </div>
+
+                            <div class="name">Pepsi скло</div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="l_hide lp_hide xl_hide extrad_prod_grid">
+                    <div class="owl-carousel modal_carousel">
+                        <label class="one_extra" for="t1">
+                            <input type="checkbox" name="t1" id="t1">
+    
+                            <div class="input_marker"></div>
+    
+                            <div class="img_wrap"><img src="img/category_link_temp_img.jpg" alt=""></div>
+    
+                            <div class="prod_info">
+                                <div class="df s_betwen">
+                                    <span class="class">Напої:</span>
+    
+                                    <p class="price">35</p>
+                                </div>
+    
+                                <div class="name">Pepsi скло</div>
+                            </div>
+                        </label>
+    
+                        <label class="one_extra" for="t2">
+                            <input type="checkbox" name="t2" id="t2">
+    
+                            <div class="input_marker"></div>
+    
+                            <div class="img_wrap"><img src="img/category_link_temp_img.jpg" alt=""></div>
+    
+                            <div class="prod_info">
+                                <div class="df s_betwen">
+                                    <span class="class">Напої:</span>
+    
+                                    <p class="price">35</p>
+                                </div>
+    
+                                <div class="name">Pepsi скло</div>
+                            </div>
+                        </label>
+    
+                        <label class="one_extra" for="t3">
+                            <input type="checkbox" name="t3" id="t3">
+    
+                            <div class="input_marker"></div>
+    
+                            <div class="img_wrap"><img src="img/category_link_temp_img.jpg" alt=""></div>
+    
+                            <div class="prod_info">
+                                <div class="df s_betwen">
+                                    <span class="class">Напої:</span>
+    
+                                    <p class="price">35</p>
+                                </div>
+    
+                                <div class="name">Pepsi скло</div>
+                            </div>
+                        </label>
+                    </div>  
+                </div>
+
+                <div class="df bottom">
+                    <button class="close">Продовжити покупки</button>
+
+                    <a href="order.html" class="default_btn"><span>Оформити замовлення</span></a>
+                </div>
+            </div>  
+
+            <div class="modal" id="forgote">
+                <button class="close close_btn"></button>
+
+                <h3 class="title_h2">Забули пароль?</h3>
+
+                <p class="text">Будь ласка, введіть email, за яким ви зареєструвалися, і ми відправимо вам посилання для відновлення пароля.</p>
+
+                <div class="input_wrap">
+                    <p>Електронна адреса:</p>
+
+                    <input type="email">
+                </div>
+
+                <a href="/" class="default_btn">
+                    <span>Відновити пароль</span>
+                </a>
+            </div> 
+
+            <div class="modal" id="login">
+                <button class="close close_btn"></button>
+
+                <h3 class="title_h2">Вхід</h3>
+
+                <div class="input_wrap">
+                    <p>Електронна адреса або номер телефону:</p>
+
+                    <input type="text" id="tel_mail">
+                </div>
+
+                <div class="input_wrap">
+                    <p>Пароль:</p>
+
+                    <input type="password">
+                    <button class="show_pass"></button>
+                </div>
+
+                <div class="extra_link">
+                    <button class="call_modal" data-is="forgote">Забули пароль?</button>
+                </div>
+
+                <button class="default_btn">
+                    <span>увійти</span>
+                </button>
+
+                <div class="legal_wrap">
+                    Авторизуючись, ви погоджуєтесь з <a href="policy.html" class="link">нашою політикою конфіденційності</a>
+                </div>
+            </div> 
+
+            <div class="modal" id="autorization">
+                <button class="close close_btn"></button>
+
+                <h3 class="title_h2">Авторизація</h3>
+
+                <div class="df btns_line">
+                    <button class="default_btn light">
+                        <span>Facebook</span>
+                    </button>
+
+                    <button class="default_btn light">
+                        <span>Google</span>
+                    </button>
+                </div>
+
+                <div class="divider df">або</div>
+
+                <div class="df btns_line second">
+                    <button class="default_btn light">
+                        <span>Зареєструватись</span>
+                    </button>
+
+                    <button class="default_btn">
+                        <span>увійти</span>
+                    </button>
+                </div>
+
+                <div class="legal_wrap">
+                    Авторизуючись, ви погоджуєтесь з <a href="policy.html" class="link">нашою політикою конфіденційності</a>
+                </div>
+            </div>
+
+            <div class="modal" id="rate">
+                <button class="close close_btn"></button>
+
+                <h3 class="title_h2">Залишити відгук</h3>
+
+                <div class="my_rating"></div>
+
+                <div class="input_wrap">
+                    <p>Ім'я:</p>
+
+                    <input type="text">
+                </div>
+
+                <div class="input_wrap">
+                    <p>Номер телефону:</p>
+
+                    <input type="text" id="call_beck_tel">
+                </div>
+
+                <div class="input_wrap">
+                    <p>Ваш коментар:</p>
+
+                    <textarea></textarea>
+                </div>
+
+                <button class="default_btn">
+                    <span>Залишити коментар</span>
+                </button>
+            </div> 
+
+            <div class="modal" id="registrate">
+                <button class="close close_btn"></button>
+
+                <h3 class="title_h2">Реєстрація</h3>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Ім'я та прізвище:</p>
+    
+                        <input type="text">
+                    </div>
+
+                    <div class="input_wrap">
+                        <p>Дата народження:</p>
+    
+                        <input type="text" id="reg_date">
+                    </div>
+                </div>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Електронна адреса:</p>
+    
+                        <input type="mail">
+                    </div>
+
+                    <div class="input_wrap">
+                        <p>Номер телефону:</p>
+    
+                        <input type="text" id="reg_tel">
+                    </div>
+                </div>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Пароль:</p>
+    
+                        <input type="password">
+                        <button class="show_pass"></button>
+                    </div>
+
+                    <div class="input_wrap">
+                        <p>Повторити пароль:</p>
+    
+                        <input type="password">
+                        <button class="show_pass"></button>
+                    </div>
+                </div>
+
+                
+
+                <button class="default_btn">
+                    <span>зареєструватись</span>
+                </button>
+
+                <div class="legal_wrap">
+                    Авторизуючись, ви погоджуєтесь з <a href="policy.html" class="link">нашою політикою конфіденційності</a>
+                </div>
+            </div> 
+
+            <div class="modal" id="new_adress">
+                <button class="close close_btn"></button>
+
+                <h3 class="title_h2">Додати нову адресу</h3>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Назва адреси:</p>
+    
+                        <input type="text">
+                    </div>
+
+                    <div class="input_wrap">
+                        <p>Місто:</p>
+    
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Вулиця:</p>
+    
+                        <input type="text">
+                    </div>
+
+                    <div class="input_wrap">
+                        <p>Будинок №:</p>
+    
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Під'їзд:</p>
+    
+                        <input type="text">
+                    </div>
+
+                    <div class="input_wrap">
+                        <p>Поверх:</p>
+    
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Квартира:</p>
+    
+                        <input type="text">
+                    </div>
+                </div>
+
+                <button class="default_btn">
+                    <span>зберегти адресу</span>
+                </button>
+
+            </div> 
+        </div>
+    </div>
 </body>
 </html>

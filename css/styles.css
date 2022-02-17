@@ -2370,6 +2370,7 @@ footer .voronin img {
 
 .default_btn span {
   z-index: 2;
+  cursor: pointer;
 }
 
 @media all and (max-width: 767px) {
