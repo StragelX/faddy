@@ -108,21 +108,31 @@ $(document).ready(function () {
     });
   }
 
-  const scrollElement = document.querySelector(".scrollable_part");
+  if ($(".scrollable_part").length) {
+    const scrollElement = document.querySelector(".scrollable_part");
 
-  document.addEventListener(
-    "scroll",
-    (event) => {
-      var top = window.pageYOffset || document.documentElement.scrollTop;
+    document.addEventListener(
+      "scroll",
+      (event) => {
+        var top = window.pageYOffset || document.documentElement.scrollTop;
 
-      console.log(top);
+        console.log(top);
 
-      if (top > 208) {
-        $(".static_part").addClass("fixed");
-      } else {
-        $(".static_part").removeClass("fixed");
-      }
-    },
-    { passive: true }
-  );
+        if (top > 208) {
+          $(".static_part").addClass("fixed");
+        } else {
+          $(".static_part").removeClass("fixed");
+        }
+      },
+      { passive: true }
+    );
+  }
+
+  if ($(".input_tel").length) {
+    var tel = document.getElementsByClassName("input_tel");
+    var telMaskOptions = {
+      mask: "+3(80)00-000-00-00",
+    };
+    var mask = IMask(tel, telMaskOptions);
+  }
 });
