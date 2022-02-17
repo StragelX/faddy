@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-
     <script src="https://unpkg.com/imask"></script>
-    
+    <script src="js/jquery.star-rating-svg.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/star-rating-svg.css">
+
     <script src="js/owl.carousel.js"></script>
     <script src="js/owl.navigation.js"></script>
     <script src="js/scripts.js"></script>
@@ -998,7 +999,7 @@
         </div>
     </div>
 
-    <div class="modal_overlay active">
+    <div class="modal_overlay">
         <div class="modal_inner">
             <div class="modal" id="thanks">
                 <button class="close close_btn"></button>
@@ -1166,7 +1167,7 @@
                 <div class="input_wrap">
                     <p>Електронна адреса або номер телефону:</p>
 
-                    <input type="text">
+                    <input type="text" id="tel_mail">
                 </div>
 
                 <div class="input_wrap">
@@ -1226,16 +1227,7 @@
 
                 <h3 class="title_h2">Залишити відгук</h3>
 
-                <div class="my-rating"></div>
-
-                <div class="df stars">
-                    <img src="img/star_filled_icon.svg" alt="">
-                    <img src="img/star_filled_icon.svg" alt="">
-                    <img src="img/star_filled_icon.svg" alt="">
-                    <img src="img/star_filled_icon.svg" alt="">
-                    <img src="img/star_unfilled_icon.svg" alt="">
-                </div>
-
+                <div class="my_rating"></div>
 
                 <div class="input_wrap">
                     <p>Ім'я:</p>
@@ -1246,7 +1238,7 @@
                 <div class="input_wrap">
                     <p>Номер телефону:</p>
 
-                    <input type="password">
+                    <input type="text" id="call_beck_tel">
                 </div>
 
                 <div class="input_wrap">
@@ -1260,23 +1252,56 @@
                 </button>
             </div> 
 
-            <div class="modal active" id="registrate">
+            <div class="modal" id="registrate">
                 <button class="close close_btn"></button>
 
                 <h3 class="title_h2">Реєстрація</h3>
 
-                <div class="input_wrap">
-                    <p>Електронна адреса або номер телефону:</p>
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Ім'я та прізвище:</p>
+    
+                        <input type="text">
+                    </div>
 
-                    <input type="text">
+                    <div class="input_wrap">
+                        <p>Дата народження:</p>
+    
+                        <input type="text" id="reg_date">
+                    </div>
                 </div>
 
-                <div class="input_wrap">
-                    <p>Пароль:</p>
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Електронна адреса:</p>
+    
+                        <input type="mail">
+                    </div>
 
-                    <input type="password">
-                    <button class="show_pass"></button>
+                    <div class="input_wrap">
+                        <p>Номер телефону:</p>
+    
+                        <input type="text" id="reg_tel">
+                    </div>
                 </div>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Пароль:</p>
+    
+                        <input type="password">
+                        <button class="show_pass"></button>
+                    </div>
+
+                    <div class="input_wrap">
+                        <p>Повторити пароль:</p>
+    
+                        <input type="password">
+                        <button class="show_pass"></button>
+                    </div>
+                </div>
+
+                
 
                 <button class="default_btn">
                     <span>зареєструватись</span>
@@ -1285,6 +1310,67 @@
                 <div class="legal_wrap">
                     Авторизуючись, ви погоджуєтесь з <a href="policy.html" class="link">нашою політикою конфіденційності</a>
                 </div>
+            </div> 
+
+            <div class="modal" id="new_adress">
+                <button class="close close_btn"></button>
+
+                <h3 class="title_h2">Додати нову адресу</h3>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Назва адреси:</p>
+    
+                        <input type="text">
+                    </div>
+
+                    <div class="input_wrap">
+                        <p>Місто:</p>
+    
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Вулиця:</p>
+    
+                        <input type="text">
+                    </div>
+
+                    <div class="input_wrap">
+                        <p>Будинок №:</p>
+    
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Під'їзд:</p>
+    
+                        <input type="text">
+                    </div>
+
+                    <div class="input_wrap">
+                        <p>Поверх:</p>
+    
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="double_input">
+                    <div class="input_wrap">
+                        <p>Квартира:</p>
+    
+                        <input type="text">
+                    </div>
+                </div>
+
+                <button class="default_btn">
+                    <span>зберегти адресу</span>
+                </button>
+
             </div> 
         </div>
     </div>

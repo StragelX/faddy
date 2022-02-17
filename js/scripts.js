@@ -102,12 +102,6 @@ $(document).ready(function () {
     });
   });
 
-  if ($(".my-rating").length) {
-    $(".my-rating").starRating({
-      initialRating: 3,
-    });
-  }
-
   if ($(".scrollable_part").length) {
     const scrollElement = document.querySelector(".scrollable_part");
 
@@ -128,11 +122,61 @@ $(document).ready(function () {
     );
   }
 
-  if ($(".input_tel").length) {
-    var tel = document.getElementsByClassName("input_tel");
-    var telMaskOptions = {
-      mask: "+3(80)00-000-00-00",
-    };
-    var mask = IMask(tel, telMaskOptions);
+  if ($("#input_tel").length) {
+    setTelMask("input_tel");
   }
+  if ($("#call_beck_tel").length) {
+    setTelMask("call_beck_tel");
+  }
+  if ($("#reg_tel").length) {
+    setTelMask("reg_tel");
+  }
+
+  if ($("#date").length) {
+    setDateMask("date");
+  }
+  if ($("#reg_date").length) {
+    setDateMask("reg_date");
+  }
+
+  if ($("#tel_mail").length) {
+    var dynamicMask = IMask(document.getElementById("tel_mail"), {
+      mask: [
+        {
+          mask: "+3(80)00-000-00-00",
+        },
+        {
+          mask: /^\S*@?\S*$/,
+        },
+      ],
+    });
+  }
+
+  $(".my_rating").starRating({
+    totalStars: 5,
+    starShape: "rounded",
+    starSize: 40,
+    emptyColor: "lightgray",
+    hoverColor: "#f26522",
+    activeColor: "#f26522",
+    callback: function (currentRating, $el) {
+      // make a server call here
+    },
+  });
 });
+
+function setTelMask(id) {
+  var tel = document.getElementById(id);
+  var telMaskOptions = {
+    mask: "+3(80)00-000-00-00",
+  };
+  var mask = IMask(tel, telMaskOptions);
+}
+
+function setDateMask(id) {
+  var date = document.getElementById(id);
+  var dateMaskOptions = {
+    mask: Date,
+  };
+  var mask = IMask(date, dateMaskOptions);
+}
